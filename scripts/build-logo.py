@@ -7,7 +7,7 @@ The mark path below and the wordmark parameters are the only hand-authored
 brand geometry. Every SVG and every raster under logo/ is derived from them, so
 a change here is the one edit that moves the logo everywhere downstream.
 
-Needs `rsvg-convert` on PATH (brew install librsvg) for the raster half.
+Needs `rsvg-convert` on PATH for the raster half; it ships in librsvg.
 """
 
 import base64
@@ -271,7 +271,7 @@ def build_rasters():
 
 def main():
     if not shutil.which("rsvg-convert"):
-        sys.exit("rsvg-convert not found; brew install librsvg")
+        sys.exit("rsvg-convert not found; install librsvg (macOS/Linux: brew install librsvg)")
     OUT.mkdir(exist_ok=True)
     build_svgs()
     build_manifest()

@@ -22,8 +22,12 @@ parameters, and writes every file under `logo/`. It traces the wordmark out of
 stylesheets load. Change the logo by editing that script and re-running it:
 
 ```bash
-./scripts/build-logo.py    # needs rsvg-convert: brew install librsvg
+./scripts/build-logo.py    # needs rsvg-convert on PATH
 ```
+
+The raster half shells out to `rsvg-convert`, which ships in librsvg: `brew
+install librsvg` on macOS or Linux, the GTK runtime on Windows. The vector half
+runs without it.
 
 ### Vector
 
