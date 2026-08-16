@@ -1,0 +1,5 @@
+# Git for Windows defaults to core.autocrlf=true. Without these rules a Windows checkout
+# rewrites every line ending and a consumer's byte-for-byte gate reports drift.
+
+* text=auto eol=lf
+*.woff2 binary

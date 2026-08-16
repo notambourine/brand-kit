@@ -233,16 +233,16 @@ the words were padding.
 
 ## Where truth lives
 
-**This skill is the golden set.** `tokens.css`, `components.css`, and `deck.css` here are
-the brand's only corrected copy. Read a value from this file, correct a value in this
-file, and never sync one in. Anything that disagrees with it is downstream and stale,
-however it renders.
+**`notambourine/brand-kit` is the golden set.** `tokens.css`, `components.css`, and
+`deck.css` here are the brand's only corrected copy. Read a value from this file, correct
+a value in this file, and never sync one in. Anything that disagrees with it is downstream
+and stale, however it renders.
 
-A surface that cannot fetch at runtime has to vendor a copy - `share.notambourine.com`
-holds `tokens.css` and `deck.css` byte-for-byte, because a self-only CSP forbids a CDN.
-A vendored copy is not a fork: it carries the upstream SHA in a lock file, its CI fails
-the moment the bytes drift, and a scheduled job fails again when this skill moves ahead
-of it. Correct the value here and let the copy catch up.
+A surface that cannot fetch at runtime pins this repo and reads the bytes out of the
+checkout - `share.notambourine.com` serves `tokens.css` and `deck.css` from its own origin,
+because a self-only CSP forbids a CDN. A pinned checkout is not a fork: the pin names one
+commit, and the consumer's CI fails when a `var()` reads a token this repo stopped
+declaring. Correct the value here and bump the pin.
 
 This skill is the complete system, so nothing has to be looked up elsewhere. It carries
 both themes: dark surfaces by default, and the light primitives behind `.theme-light`
@@ -273,5 +273,5 @@ turns on slide numbers. Load `tokens.css` on the page too - `deck.css` declares 
 brand correction reaches a deck with no second edit.
 
 `share.notambourine.com` runs this theme in its browser renderer and its PDF export, so a
-deck shared from there and a deck built by hand come out the same. That copy is vendored
-and gated against this one; correct a value here.
+deck shared from there and a deck built by hand come out the same. It serves these bytes
+from a pinned checkout of this repo; correct a value here.
