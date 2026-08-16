@@ -46,7 +46,7 @@ your output, or inline them.
 | `components.css` | `.nt-btn`, `.nt-badge`, `.nt-chip`, `.nt-input`, `.nt-card`, `.nt-nav`, `.nt-switch`/`.nt-check`/`.nt-radio`. All `var()`-based. |
 | `deck.css` | Marpit slide theme, 1280x720. Every value a `var()` off `tokens.css`. See "Decks" below for how to feed it markdown. |
 | `fonts/` | Six woff2: Nunito, Hanken Grotesk, JetBrains Mono, roman and italic each. Latin subset, variable, SIL OFL 1.1 (`fonts/OFL.txt`). Plus `nunito-wordmark-800.woff2`, a ten-glyph static subset for the lockup alone - 1.5 KB against Nunito's 39 KB, so a PDF or an offline snapshot inlines it as a data URI. |
-| `logo/` | The mark, the three lockup colorways, the favicon and app tiles, and `export/` rasters cut from them. `scripts/build-logo.py` writes all of it. |
+| `logo/` | The mark, the monogram, the three lockup colorways, the favicon and app tiles, and `export/` rasters cut from them. `scripts/build-logo.py` writes all of it. |
 | `hello-world.html` | Working page using both stylesheets. Start here for a mock; open it to eyeball the brand. |
 
 ```html
@@ -90,9 +90,11 @@ These are the rules that get broken. Check your output against them.
   caps - 20px in nav/buttons, 24px in features, 16px in inputs.
 - **Never redraw the logo; link a file out of `logo/`.** The lockup is `notambourine` set
   in Nunito 800 beside the tambourine mark. Ship `logo/lockup.svg`, or its `-white` and
-  `-ink` reversals; `logo/mark.svg` is the mark alone. `logo/lockup-text.svg` keeps the
-  wordmark as live `<text>` over an inlined ten-glyph Nunito subset - open that one to
-  edit the type, and re-run `scripts/build-logo.py` rather than hand-patching an outline.
+  `-ink` reversals. Where the lockup will not fit - an avatar, an app icon, a stamp - use
+  `logo/monogram.svg`, the mark with `no` nested in the crescent; `logo/mark.svg` drops
+  the letters for a watermark or a bullet. `logo/lockup-text.svg` keeps the wordmark as
+  live `<text>` over an inlined ten-glyph Nunito subset - open that one to edit the type,
+  and re-run `scripts/build-logo.py` rather than hand-patching an outline.
   `--font-wordmark` exists for the lockup and nothing else; a heading that reaches for it
   is a bug.
 - **One pink word per headline**, via `<em>` - pink *and* italic. Hanken Grotesk ships a

@@ -45,17 +45,23 @@ SIZE, TRACKING = 60.0, -1.0
 ORIGIN_X, BASELINE_Y = 62.0, 78.0
 LOCKUP_PAD = 6.0
 
-# Fraction of the square tile the mark's height occupies. The app tile pulls in
-# so a rounded corner never crops a jingle; maskable clears Android's 80% safe
-# circle. The favicon tile runs much closer to the edge because at 16px the
-# crescent is about two pixels wide and any margin spent is a pixel lost.
-FILL_BARE, FILL_TILE, FILL_MASKABLE, FILL_FAVICON = 0.92, 0.66, 0.52, 0.88
+# The monogram is the lockup truncated, not a second drawing: same face, same
+# size, same origin, so the n nests into the crescent's mouth exactly as it
+# does in the full lockup.
+MONOGRAM = TEXT[:2]
+
+# Fraction of the square tile the artwork's long side occupies. The app tile
+# pulls in so a rounded corner never crops a jingle; maskable clears Android's
+# 80% safe circle. The favicon tile runs much closer to the edge because at
+# 16px the crescent is about two pixels wide and any margin spent is a pixel
+# lost.
+FILL_BARE, FILL_TILE, FILL_MASKABLE, FILL_FAVICON = 0.92, 0.74, 0.60, 0.94
 CORNER = 0.2237  # Apple's squircle radius as a fraction of the tile
 CORNER_FAVICON = 0.18  # a squircle this small reads as a blur, so round it less
 
 
-def outline_wordmark():
-    """Trace `notambourine` from the repo's own Nunito, so paths cannot drift."""
+def outline(text):
+    """Trace `text` from the repo's own Nunito, so paths cannot drift."""
     font = instantiateVariableFont(
         TTFont(ROOT / "fonts/nunito-latin-var.woff2"), {"wght": WEIGHT}, inplace=True
     )
@@ -63,7 +69,7 @@ def outline_wordmark():
     glyphs, cmap, hmtx = font.getGlyphSet(), font.getBestCmap(), font["hmtx"]
 
     commands, bounds, x = [], None, ORIGIN_X
-    for ch in TEXT:
+    for ch in text:
         name = cmap[ord(ch)]
         # Font units go up, SVG user units go down, so the y scale is negated.
         t = Transform(SIZE / upem, 0, 0, -SIZE / upem, x, BASELINE_Y)
@@ -86,11 +92,25 @@ def outline_wordmark():
     return " ".join(commands), bounds
 
 
-def square(fill_fraction):
-    """Square viewBox centred on the mark, sized so it fills `fill_fraction`."""
-    x0, y0, x1, y1 = MARK_BOUNDS
-    side = (y1 - y0) / fill_fraction
+def union(a, b):
+    return (min(a[0], b[0]), min(a[1], b[1]), max(a[2], b[2]), max(a[3], b[3]))
+
+
+def square(bounds, fill_fraction):
+    """Square viewBox centred on `bounds`, sized so its long side fills the tile."""
+    x0, y0, x1, y1 = bounds
+    side = max(x1 - x0, y1 - y0) / fill_fraction
     return (x0 + x1) / 2 - side / 2, (y0 + y1) / 2 - side / 2, side
+
+
+def tile(body, bounds, fill_fraction, corner, note):
+    x, y, side = square(bounds, fill_fraction)
+    rx = f' rx="{side * corner:.2f}"' if corner else ""
+    return svg(
+        f'  <rect x="{x:.2f}" y="{y:.2f}" width="{side:.2f}" height="{side:.2f}"'
+        f'{rx} fill="{BG}"/>\n{body}',
+        (x, y, side, side), PINK, note,
+    )
 
 
 def svg(body, view, fill, note):
@@ -109,22 +129,32 @@ def write(name, text):
 
 
 def build_svgs():
-    word, word_bounds = outline_wordmark()
+    word, word_bounds = outline(TEXT)
+    mono, mono_bounds = outline(MONOGRAM)
 
-    minx = min(MARK_BOUNDS[0], word_bounds[0]) - LOCKUP_PAD
-    miny = min(MARK_BOUNDS[1], word_bounds[1]) - LOCKUP_PAD
+    lockup_bounds = union(MARK_BOUNDS, word_bounds)
     lockup_view = (
-        minx, miny,
-        max(MARK_BOUNDS[2], word_bounds[2]) + LOCKUP_PAD - minx,
-        max(MARK_BOUNDS[3], word_bounds[3]) + LOCKUP_PAD - miny,
+        lockup_bounds[0] - LOCKUP_PAD, lockup_bounds[1] - LOCKUP_PAD,
+        lockup_bounds[2] - lockup_bounds[0] + 2 * LOCKUP_PAD,
+        lockup_bounds[3] - lockup_bounds[1] + 2 * LOCKUP_PAD,
     )
     lockup_body = f'{MARK}\n  <path d="{word}"/>'
 
-    bare_x, bare_y, bare_side = square(FILL_BARE)
+    mono_body = f'{MARK}\n  <path d="{mono}"/>'
+    mono_bounds = union(MARK_BOUNDS, mono_bounds)
+
+    bare_x, bare_y, bare_side = square(MARK_BOUNDS, FILL_BARE)
     bare_view = (bare_x, bare_y, bare_side, bare_side)
+    mx, my, mside = square(mono_bounds, FILL_BARE)
+    mono_view = (mx, my, mside, mside)
 
     for suffix, fill in (("", PINK), ("-white", WHITE), ("-ink", INK)):
         write(f"mark{suffix}.svg", svg(MARK, bare_view, fill, "Tambourine mark."))
+        write(f"monogram{suffix}.svg", svg(
+            mono_body, mono_view, fill,
+            f"Mark with `{MONOGRAM}` nested in the crescent, transparent and"
+            " square. The short form of the lockup: avatar, favicon, app tile.",
+        ))
         write(f"lockup{suffix}.svg", svg(
             lockup_body, lockup_view, fill,
             "Lockup, wordmark outlined - no font to load, so it renders the same"
@@ -152,39 +182,28 @@ def build_svgs():
         " subset inlined as a data URI. Edit in Figma; rasterize lockup.svg.",
     ))
 
-    tile_x, tile_y, tile = square(FILL_TILE)
-    write("icon.svg", svg(
-        f'  <rect x="{tile_x:.2f}" y="{tile_y:.2f}" width="{tile:.2f}"'
-        f' height="{tile:.2f}" rx="{tile * CORNER:.2f}" fill="{BG}"/>\n{MARK}',
-        (tile_x, tile_y, tile, tile), PINK,
-        "App tile: mark on the brand's page canvas, opaque because iOS renders"
-        " a transparent touch icon on black.",
+    write("icon.svg", tile(
+        mono_body, mono_bounds, FILL_TILE, CORNER,
+        "App tile: monogram on the brand's page canvas, opaque because iOS"
+        " renders a transparent touch icon on black.",
     ))
 
-    fav_x, fav_y, fav = square(FILL_FAVICON)
-    write("favicon.svg", svg(
-        f'  <rect x="{fav_x:.2f}" y="{fav_y:.2f}" width="{fav:.2f}"'
-        f' height="{fav:.2f}" rx="{fav * CORNER_FAVICON:.2f}" fill="{BG}"/>\n{MARK}',
-        (fav_x, fav_y, fav, fav), PINK,
-        "Browser tab icon, cut tighter than icon.svg so the crescent survives"
+    write("favicon.svg", tile(
+        mono_body, mono_bounds, FILL_FAVICON, CORNER_FAVICON,
+        "Browser tab icon, cut tighter than icon.svg so the monogram survives"
         " 16px. Link this as rel=icon and let the SVG scale.",
     ))
 
     # iOS applies its own squircle mask, so a touch icon that rounds its own
     # corners gets rounded twice. Same padding as icon.svg, square edges.
-    write("icon-square.svg", svg(
-        f'  <rect x="{tile_x:.2f}" y="{tile_y:.2f}" width="{tile:.2f}"'
-        f' height="{tile:.2f}" fill="{BG}"/>\n{MARK}',
-        (tile_x, tile_y, tile, tile), PINK,
+    write("icon-square.svg", tile(
+        mono_body, mono_bounds, FILL_TILE, 0,
         "App tile, square edges, for a platform that masks the icon itself.",
     ))
 
-    mask_x, mask_y, mask = square(FILL_MASKABLE)
-    write("icon-maskable.svg", svg(
-        f'  <rect x="{mask_x:.2f}" y="{mask_y:.2f}" width="{mask:.2f}"'
-        f' height="{mask:.2f}" fill="{BG}"/>\n{MARK}',
-        (mask_x, mask_y, mask, mask), PINK,
-        "Android maskable: full-bleed tile, mark inside the 80% safe circle.",
+    write("icon-maskable.svg", tile(
+        mono_body, mono_bounds, FILL_MASKABLE, 0,
+        "Android maskable: full-bleed tile, monogram inside the 80% safe circle.",
     ))
 
 
@@ -233,7 +252,9 @@ def build_rasters():
 
     for size in (256, 512, 1024):
         png("mark.svg", size, f"mark-{size}.png")
+        png("monogram.svg", size, f"monogram-{size}.png")
     png("mark-white.svg", 512, "mark-white-512.png")
+    png("monogram-white.svg", 512, "monogram-white-512.png")
 
     for suffix in ("", "-white", "-ink"):
         png(f"lockup{suffix}.svg", 1024, f"lockup{suffix}-1024.png")
