@@ -81,11 +81,18 @@
   /* Hanken Grotesk headings over a JetBrains Mono body, with Nunito
      reserved for the wordmark. Accent text shares the mono, so
      there is no separate accent family. */
-  --font-wordmark: 'Nunito', system-ui, sans-serif;                   /* the lockup, nothing else */
-  --font-display:  'Hanken Grotesk', system-ui, sans-serif;           /* headings */
-  --font-accent:   'JetBrains Mono', ui-monospace, 'SF Mono', Monaco, monospace;   /* eyebrows, labels, buttons */
-  --font-body:     'JetBrains Mono', ui-monospace, 'SF Mono', Monaco, monospace;   /* body */
-  --font-mono:     'JetBrains Mono', ui-monospace, 'SF Mono', Monaco, monospace;   /* code: same face */
+  /* The --nt-* primitive carries the stack and the alias names the job, the
+     same split the palette uses. Tailwind claims `--font-*` for its own utility
+     namespace, so a Tailwind surface reads the primitive and leaves the alias. */
+  --nt-font-nunito:  'Nunito', system-ui, sans-serif;
+  --nt-font-hanken:  'Hanken Grotesk', system-ui, sans-serif;
+  --nt-font-jetbrains: 'JetBrains Mono', ui-monospace, 'SF Mono', Monaco, monospace;
+
+  --font-wordmark: var(--nt-font-nunito);      /* the lockup, nothing else */
+  --font-display:  var(--nt-font-hanken);      /* headings */
+  --font-accent:   var(--nt-font-jetbrains);   /* eyebrows, labels, buttons */
+  --font-body:     var(--nt-font-jetbrains);   /* body */
+  --font-mono:     var(--nt-font-jetbrains);   /* code: same face */
 
   /* Sizes: a 1.25 modular scale rounded to friendly numbers.
      rem, not px, so a reader who raises the browser's default font size
@@ -164,8 +171,11 @@
   --bg-veil: rgba(11,11,12,0.70);   /* frosted nav over dark */
 
   /* ---------- Motion ---------- */
-  --ease-out:   cubic-bezier(.2,.7,.2,1);   /* default */
-  --ease-bounce: cubic-bezier(.34,1.5,.64,1); /* playful, but subtle */
+  /* Primitive plus alias again, because Tailwind owns `--ease-*` too. */
+  --nt-ease-out:    cubic-bezier(.2,.7,.2,1);
+  --nt-ease-bounce: cubic-bezier(.34,1.5,.64,1);
+  --ease-out:   var(--nt-ease-out);      /* default */
+  --ease-bounce: var(--nt-ease-bounce);  /* playful, but subtle */
   --dur-1: 120ms;
   --dur-2: 200ms;
   --dur-3: 320ms;
