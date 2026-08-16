@@ -6,6 +6,13 @@ spacing, component recipes, and voice.
 
 Correct a brand value here. Every other copy is downstream.
 
+| Link this | To get |
+|---|---|
+| `tokens.css` | The whole system: the faces, every value, and styled bare HTML. |
+| `vars.css` | The values alone, for a surface with its own faces and base layer. |
+| `components.css` | `.nt-btn`, `.nt-card`, `.nt-nav`, and the rest, all `var()`-based. |
+| `deck.css` | The Marpit slide theme, 1280x720. Load `vars.css` on the page too. |
+
 ## Consume it
 
 Pin this repo as a submodule and read the bytes out of the checkout. Do not copy a

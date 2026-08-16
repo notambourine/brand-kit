@@ -39,7 +39,10 @@ your output, or inline them.
 
 | File | What it does |
 |---|---|
-| `tokens.css` | Every token as a CSS var, plus base element styles. Load first and `h1`, `p`, `a`, `code`, `.eyebrow`, `.display`, `.lede` all come styled. |
+| `tokens.css` | The whole system in one link: `fonts.css`, `vars.css`, `elements.css`. Load first and `h1`, `p`, `a`, `code`, `.eyebrow`, `.display`, `.lede` all come styled. |
+| `vars.css` | Every value as a CSS var, and nothing else. What a surface with its own faces and its own base layer imports. |
+| `fonts.css` | The six `@font-face` blocks, pointed at `./fonts/`. |
+| `elements.css` | The base element styles: bare `h1`, `p`, `a`, `code` on brand with no classes. |
 | `components.css` | `.nt-btn`, `.nt-badge`, `.nt-chip`, `.nt-input`, `.nt-card`, `.nt-nav`, `.nt-switch`/`.nt-check`/`.nt-radio`. All `var()`-based. |
 | `deck.css` | Marpit slide theme, 1280x720. Every value a `var()` off `tokens.css`. See "Decks" below for how to feed it markdown. |
 | `fonts/` | Six woff2: Nunito, Hanken Grotesk, JetBrains Mono, roman and italic each. Latin subset, variable, SIL OFL 1.1 (`fonts/OFL.txt`). Plus `nunito-wordmark-800.woff2`, a ten-glyph static subset for the lockup alone - 1.5 KB against Nunito's 39 KB, so a PDF or an offline snapshot inlines it as a data URI. |
@@ -50,11 +53,15 @@ your output, or inline them.
 <link rel="stylesheet" href="components.css">
 ```
 
-**Copy the whole skill directory, not the stylesheets alone.** `tokens.css` declares
-its own `@font-face` blocks against `./fonts/`, so type is wired up with no network
-and no third party - a mock renders on brand from `file://` on a plane. Those paths
-resolve against the CSS file, so inlining `tokens.css` into a `<style>` block instead
-means `fonts/` has to sit beside the HTML.
+**Copy the whole skill directory, not the stylesheets alone.** `tokens.css` pulls in
+`fonts.css`, which declares `@font-face` against `./fonts/`, so type is wired up with
+no network and no third party - a mock renders on brand from `file://` on a plane.
+Those paths resolve against the CSS file, so inlining the CSS into a `<style>` block
+instead means `fonts/` has to sit beside the HTML.
+
+A surface that already ships its own faces and its own base layer imports `vars.css`
+alone. It gets every value and none of the opinions, and there is still one copy of
+each number.
 
 Never swap that for a Google Fonts `@import`. It sends the visited URL to Google as a
 `Referer` and blocks a self-only CSP, which is why the site deleted its own. A mock is
