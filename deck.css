@@ -91,6 +91,8 @@ section pre code {
   font-size: 1em;
 }
 
+/* The left rule is quotation grammar, not a card stripe; the
+   no-colored-left-border non-negotiable governs cards. */
 section blockquote {
   border-left: 2px solid var(--support, #58C9B9);
   padding-left: 0.8em;
@@ -115,7 +117,7 @@ section hr { border: 0; border-top: 1px solid var(--line, #2A2A2E); width: 100%;
 
 /* `<!-- paginate: true -->` opts a deck in; Marpit fills the attribute. */
 section::after {
-  color: var(--nt-fg-mute, #5A5A62);
+  color: var(--fg-mute, #5A5A62);
   font-family: var(--font-accent, ui-monospace, monospace);
   font-size: 16px;
   padding: 40px 48px;
