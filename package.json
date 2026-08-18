@@ -1,0 +1,16 @@
+{
+  "name": "@notambourine/brand-kit",
+  "version": "1.0.0",
+  "description": "The NoTambourine brand's golden set: tokens, element styles, deck theme, faces, and logo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notambourine/brand-kit.git"
+  },
+  "author": "NoTambourine LLC",
+  "type": "module",
+  "//": "No exports map: consumers import stylesheets and logo files by path, and vendor scripts walk fonts/ and logo/ whole. An exports map would have to restate the tree and would go stale the first time a file is added. No files field either, for the same reason - this installs from git, so what the repo holds is what a consumer gets.",
+  "sideEffects": [
+    "*.css"
+  ]
+}
