@@ -86,16 +86,30 @@ regenerate it, never retouch it.
 
 ## Consume it
 
-Pin this repo as a submodule and read the bytes out of the checkout. Do not copy a
-stylesheet into a consumer; a copy drifts and nothing fails when it does.
+Install it and read the bytes out of `node_modules`. Do not copy a stylesheet into a
+consumer; a copy drifts and nothing fails when it does.
 
 ```bash
-git submodule add https://github.com/notambourine/brand-kit.git upstream/brand-kit
+npm install @notambourine/brand-kit
+```
+
+There is no `exports` map, so import or copy any shipped path directly:
+
+```js
+import "@notambourine/brand-kit/tokens.css";
+```
+
+```bash
+cp -R node_modules/@notambourine/brand-kit/{fonts,logo} public/
 ```
 
 `tokens.css` declares the `@font-face` rules and every `var()` the other two read, so
 load it first and serve `fonts/` beside it. The paths inside it are relative to the CSS
 file, so inlining it into a `<style>` block breaks the faces.
+
+The package ships the stylesheets, `fonts/`, `logo/`, and `SKILL.md`. The logo build
+script and `hello-world.html` stay in the repo. Pin an exact version and bump it on
+purpose; a caret range moves the brand under a consumer with no diff to review.
 
 Consumers today:
 
@@ -112,6 +126,19 @@ fallback and the page still renders, so a bump can go wrong quietly. Check three
 in the consumer's CI: the font bytes hash against `fonts/`, every color is one this kit
 defines, and every `var()` reads a property it still declares. `notambourine/share`'s
 `npm run brand` is the reference implementation.
+
+## Release
+
+Bump `version` in `package.json`, land it, then tag the merge commit:
+
+```bash
+git tag v1.0.1 && git push origin v1.0.1
+```
+
+`.github/workflows/npm-publish.yml` publishes the tag through npm trusted publishing.
+No token lives in this repo, and npm attaches a provenance attestation tying the
+published tarball to that workflow run. The workflow fails if the tag and the manifest
+disagree.
 
 ## License
 

@@ -7,9 +7,27 @@
     "type": "git",
     "url": "git+https://github.com/notambourine/brand-kit.git"
   },
+  "homepage": "https://github.com/notambourine/brand-kit#readme",
+  "bugs": "https://github.com/notambourine/brand-kit/issues",
+  "keywords": [
+    "brand",
+    "design-tokens",
+    "css",
+    "marpit",
+    "notambourine"
+  ],
   "author": "NoTambourine LLC",
   "type": "module",
-  "//": "No exports map: consumers import stylesheets and logo files by path, and vendor scripts walk fonts/ and logo/ whole. An exports map would have to restate the tree and would go stale the first time a file is added. No files field either, for the same reason - this installs from git, so what the repo holds is what a consumer gets.",
+  "//": "No exports map: consumers import stylesheets and logo files by path, and their vendor scripts walk fonts/ and logo/ whole. A map would restate the tree and go stale the first time a file is added.",
+  "files": [
+    "*.css",
+    "fonts",
+    "logo",
+    "SKILL.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": [
     "*.css"
   ]
