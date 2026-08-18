@@ -40,35 +40,40 @@ h4           { font-size: var(--fs-h4); }
 
 p            { font-size: var(--fs-body); line-height: var(--lh-body);
                color: var(--fg2); margin: 0; text-wrap: pretty; }
-.lede        { font-size: 20px; line-height: 1.5; color: var(--fg2); }
+.lede        { font-size: var(--fs-lede); line-height: var(--lh-lede); color: var(--fg2); }
 small        { font-size: var(--fs-caption); color: var(--fg3); }
 /* Sentence-case supporting label, used under a heading or over a logo wall.
    The sentence-case counterpart to .eyebrow; never ALL CAPS. */
 .caption     { font-size: var(--fs-caption); color: var(--fg3);
                font-family: var(--font-accent); font-weight: var(--fw-medium); }
 .eyebrow     { font-size: var(--fs-caption); letter-spacing: var(--ls-allcaps);
-               text-transform: uppercase; color: var(--nt-pink);
+               text-transform: uppercase; color: var(--accent-text);
                font-weight: var(--fw-semibold); font-family: var(--font-accent); }
 
 /* One pink word per headline. Hanken Grotesk ships a drawn italic, so
    the emphasis gets both the accent and a real slant, never a faked skew. */
-h1 em, h2 em, .display em { color: var(--nt-pink); font-style: italic; }
+h1 em, h2 em, .display em { color: var(--accent-text); font-style: italic; }
 
 /* Pink links are for prose. Links in chrome (nav, footer, buttons,
    a logo lockup) set `color: inherit` and take their color from
    the component. */
-a            { color: var(--nt-pink); text-decoration: none;
+a            { color: var(--accent-text); text-decoration: none;
                border-bottom: 1.5px solid transparent;
                transition: border-color var(--dur-2) var(--ease-out); }
-a:hover      { border-bottom-color: var(--nt-pink); }
+a:hover      { border-bottom-color: var(--accent-text); }
 
-/* Never ship without this. Pink ring, offset so it clears a pill. */
+/* Never ship without this. Pink ring, offset so it clears a pill.
+   The outline traces the element's own corners, so no radius here: at
+   (0,1,1) this rule outranks a component class and would square a pill. */
 a:focus-visible, button:focus-visible,
-input:focus-visible, [role='switch']:focus-visible {
+input:focus-visible, select:focus-visible, textarea:focus-visible,
+[role='switch']:focus-visible, [role='checkbox']:focus-visible,
+[role='radio']:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
-  border-radius: var(--r-xs);
 }
+/* Links have no radius of their own to trace. */
+a:focus-visible { border-radius: var(--r-xs); }
 
 code, kbd, pre { font-family: var(--font-mono); font-size: var(--fs-mono); }
 code         { background: var(--accent-soft); color: var(--accent-fg);
@@ -90,21 +95,6 @@ hr           { border: 0; border-top: 1px solid var(--line); margin: var(--sp-8)
   html { scroll-behavior: auto; }
 }
 
-/* Light theme, opt-in. Add class="theme-light" to a root element
-   when you specifically need light surfaces (rare). */
-.theme-light {
-  --bg:        var(--nt-paper);
-  --bg-card:   var(--nt-white);
-  --bg-raised: var(--nt-white);
-  --fg1:       var(--nt-ink);
-  --fg2:       var(--nt-ink-70);
-  --fg3:       var(--nt-mid);
-  --line:      var(--nt-line);
-  --line-soft: var(--nt-line-soft);
-  --accent-fg:  var(--nt-pink-press);
-  --support-fg: var(--nt-mint-press);
-  --accent-soft: var(--nt-pink-soft);
-  --support-soft: var(--nt-mint-soft);
-  --bg-veil: rgba(248,249,250,0.70);
-  background: var(--bg); color: var(--fg2);
-}
+/* The light-theme token remap lives in vars.css, so the vars-alone
+   import path carries both themes. This only applies the ground. */
+.theme-light { background: var(--bg); color: var(--fg2); }

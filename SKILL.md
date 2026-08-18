@@ -68,6 +68,19 @@ Never swap that for a Google Fonts `@import`. It sends the visited URL to Google
 `Referer` and blocks a self-only CSP, which is why the site deleted its own. A mock is
 the artifact most likely to graduate into a real page, so it carries the same rule.
 
+### Fonts on a locked-down surface
+
+Some surfaces cannot load `./fonts/` at all: a claude.ai artifact, an email client, a
+README banner. There the faces fall back silently and the brand degrades without a
+decision. Make it a decision:
+
+- Inline the face as a data URI in the `@font-face` `src`: `base64 -i fonts/<file>.woff2`
+  emits the payload. The wordmark subset is 1.5 KB, so inline it always; a full face runs
+  30-40 KB, so inline one only when the surface is worth the bytes.
+- Where inlining is not worth it, the fallback stacks in `vars.css` are the brand's
+  degraded form: `system-ui` for display, `ui-monospace` for body. Ship them knowingly.
+  The Google Fonts rule above holds here too.
+
 ## Non-negotiables
 
 These are the rules that get broken. Check your output against them.
@@ -173,8 +186,8 @@ Three brand fixtures read as tells and must survive the read:
 - **The rounded lockup carries the play; the headings stay sober.** The reader is a PE
   operating partner, so only the lockup gets to be warm.
 - Body runs `1.7` leading and `+0.01em` tracking. Monospace at a sans's 1.55 reads cramped.
-- Tracking tightens as size grows: `--ls-display` (-0.02em) is the floor, and hero type
-  above ~56px wants -0.03em. Zero on body, +0.08em on ALL-CAPS eyebrows.
+- Tracking tightens as size grows: `--ls-tight` (-0.02em) is the floor, and `--ls-display`
+  (-0.03em) is what hero type above ~56px wants. Zero on body, +0.08em on ALL-CAPS eyebrows.
 - `text-wrap: balance` on headings, `pretty` on paragraphs. Always.
 - Body copy is a single column, max ~640px. Never full-viewport.
 - Card grids are 2 or 3 columns, single on mobile. Never 4.
@@ -263,8 +276,9 @@ A shipping surface may render dark only. That is a choice it made, not a shorter
 
 Every stylesheet here is native CSS with no build step, so they load into a plain HTML file,
 a Worker, an email template, or a React app unchanged. Write against the semantic layer -
-`--bg`, `--bg-card`, `--fg1`/`2`/`3`, `--accent`, `--accent-fg`, `--support`, `--line`,
-`--sp-*`, `--r-*`, `--shadow-*`, `--ring-accent`, `--font-*`. It is the stable API and it
+`--bg`, `--bg-card`, `--fg1`/`2`/`3`, `--fg-mute`, `--accent`, `--accent-fg`,
+`--accent-text`, `--support`, `--line`, `--sp-*`, `--r-*`, `--shadow-*`, `--ring-accent`,
+`--font-*`. It is the stable API and it
 survives a theme swap. The `--nt-*` primitives beneath it are the raw palette; reach past
 the alias to one only when no alias covers what you need, and never inline a literal
 color - `.theme-light` only works because no component hardcodes one. A `var()` fallback

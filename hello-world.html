@@ -73,13 +73,20 @@
 
   <div class="grid">
     <div class="nt-toggle-row">
-      <span style="flex:1;font-size:14px;font-weight:600;color:var(--fg1)">Email me</span>
+      <span style="flex:1;font-size:var(--fs-small);font-weight:var(--fw-semibold);color:var(--fg1)">Email me</span>
       <button class="nt-switch" role="switch" aria-checked="true" aria-label="Email me"></button>
     </div>
     <div class="nt-toggle-row">
-      <span class="nt-radio" role="radio" aria-checked="true"></span>
-      <span style="font-size:14px;font-weight:500;color:var(--fg1)">AI engineering</span>
+      <!-- A button, not a span: it tabs and clicks with no extra attributes. -->
+      <button class="nt-radio" role="radio" aria-checked="true" aria-label="AI engineering"></button>
+      <span style="font-size:var(--fs-small);font-weight:var(--fw-medium);color:var(--fg1)">AI engineering</span>
     </div>
+  </div>
+
+  <!-- Mint is structural: a border and a status dot, never a CTA. -->
+  <div class="nt-card nt-card--support">
+    <span class="nt-badge nt-badge--mint"><span class="nt-badge__dot"></span>Availability</span>
+    <p style="margin-top:var(--sp-2)">One pod opens in October. Two sprint slots before then.</p>
   </div>
 
   <p><small>Tokens live in <code>tokens.css</code> &middot; recipes in
