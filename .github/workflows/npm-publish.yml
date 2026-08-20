@@ -1,37 +1,76 @@
 name: Publish
 
-# Publishes @notambourine/brand-kit on a v* tag. Trusted publishing, so there is no
-# NPM_TOKEN to leak and npm signs a provenance attestation on its own.
+# Publishes @notambourine/brand-kit when a merge to main carries a version the registry
+# does not have yet. The manifest is the trigger; the v* tag is written after the publish
+# lands, so a tag never exists for a version npm rejected.
+# Trusted publishing, so there is no NPM_TOKEN to leak and npm signs provenance on its own.
 # The trusted publisher on npmjs.com must name this file: npm-publish.yml
 # https://docs.npmjs.com/trusted-publishers
 
 on:
   push:
-    tags: ["v*"]
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write # writes the v* tag after publishing
   id-token: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
 
 jobs:
   publish:
+    # Deliberately NOT ubuntu-slim: this job runs a few times a month, so the 3x tier
+    # saving is pennies a year, and it is the release path - a slim-only surprise would
+    # surface at publish time with a half-shipped version.
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
+          # Trusted publishing needs npm >= 11.5.1; Node 24 has shipped past that since
+          # 24.5, so the bundled npm is enough and this job installs nothing.
           node-version: 24
           registry-url: https://registry.npmjs.org
           package-manager-cache: false
 
-      # A tag that disagrees with the manifest publishes a version nobody can find by tag.
-      - name: Match the tag to the manifest
+      # A registry read that fails must not read as "unpublished" and double-publish, so
+      # only a real E404 counts as "not there yet". `versions` is a bare string, not an
+      # array, when exactly one version is published - flatten before asking.
+      - name: Is this version already on npm
+        id: check
         run: |
-          tag="${GITHUB_REF_NAME#v}"
-          pkg="$(npm pkg get version | tr -d '"')"
-          [ "$tag" = "$pkg" ] || { echo "tag $tag != package.json $pkg"; exit 1; }
+          name="$(npm pkg get name | tr -d '"')"
+          version="$(npm pkg get version | tr -d '"')"
+          if ! published="$(npm view "$name" versions --json 2>&1)"; then
+            case "$published" in
+              *E404*) published='[]' ;;
+              *) echo "$published"; echo "registry read failed"; exit 1 ;;
+            esac
+          fi
+          if jq -e --arg v "$version" '[.] | flatten | index($v)' <<<"$published" >/dev/null; then
+            echo "$name@$version is already published; nothing to do"
+            echo "publish=false" >>"$GITHUB_OUTPUT"
+          else
+            echo "publish=true" >>"$GITHUB_OUTPUT"
+          fi
+          echo "version=$version" >>"$GITHUB_OUTPUT"
 
-      - run: npm install -g npm@latest # OIDC needs npm >= 11.5.1
+      - if: steps.check.outputs.publish == 'true'
+        run: npm publish
 
-      - run: npm publish
+      - if: steps.check.outputs.publish == 'true'
+        name: Tag the published commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.check.outputs.version }}
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/git/refs" \
+            -f "ref=refs/tags/v$VERSION" \
+            -f "sha=$GITHUB_SHA"
