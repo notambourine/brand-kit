@@ -42,7 +42,10 @@ MARK_BOUNDS = (-5.0, -3.0, 84.0, 121.0)
 
 TEXT, WEIGHT = "notambourine", 800
 SIZE, TRACKING = 60.0, -1.0
-ORIGIN_X, BASELINE_Y = 62.0, 78.0
+# The baseline sits where it puts the x-height band's centre on the crescent's
+# inner circle (60.59), so the wordmark reads centred against the mark and the
+# monogram's `no` sits level in the mouth rather than riding low.
+ORIGIN_X, BASELINE_Y = 62.0, 75.3
 LOCKUP_PAD = 6.0
 
 # The monogram is the lockup truncated, not a second drawing: same face, same
@@ -226,7 +229,7 @@ def build_svgs():
         f"src:url(data:font/woff2;base64,{subset}) format('woff2')}}\n"
         "    </style>\n  </defs>\n"
         f"{MARK}\n"
-        f'  <text x="{ORIGIN_X:.0f}" y="{BASELINE_Y:.0f}"'
+        f'  <text x="{ORIGIN_X:g}" y="{BASELINE_Y:g}"'
         " font-family=\"'NT Wordmark', Nunito, system-ui, sans-serif\""
         f' font-size="{SIZE:.0f}" font-weight="{WEIGHT}"'
         f' letter-spacing="{TRACKING:.0f}">{TEXT}</text>',
