@@ -21,6 +21,15 @@ The name carries the style, not the positioning. A tambourine is what you add wh
 is nothing left to add, so **NoTambourine = no padding**. That is why the design is
 confident type, one decisive pink, lots of air, no decoration.
 
+## Offers
+
+Use these names in copy and examples. Describe the client's outcome before staffing.
+
+- **Assessment:** Identify the technology constraint and decide what to address first.
+- **Embedded:** Work inside the client's team to lead and deliver the changes.
+
+Invite a conversation before asking the reader to choose an engagement.
+
 Fuller doctrine is published, so fetch it rather than reconstructing it. Every path below
 returns `text/plain` over plain HTTP with no auth, no signup, and no redirect - `curl` or
 `wget` one directly. This file stands alone when the machine is offline.
