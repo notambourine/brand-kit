@@ -5,13 +5,17 @@ description: NoTambourine brand system - colors, tokens, type, spacing, componen
 
 # NoTambourine brand
 
-A boutique AI-enabled engineering agency, working as a hands-on operating partner inside
-the client's org. The client's growth is capped by their tech: a legacy commerce stack, a
+A boutique engineering agency for leaders whose technology is holding back the business.
+Senior operators work inside the client's org. The constraint may be a legacy commerce stack, a
 revenue-share SaaS, a roadmap nobody can staff for. **Value creation is the deliverable,
 and trust is earned by shipping.** A CEO who wants the culture to change gets that from
 work landing in prod, not from a workshop. Scope holds, so the estimate is worth
 something. AI at the keyboard is why a small team can price this way; it is not what the
 client buys.
+
+Define fit by the business constraint and the responsibility we take on. Mention
+private-equity experience when relevant to the conversation. Keep the general positioning
+open to clients regardless of ownership structure.
 
 The name carries the style, not the positioning. A tambourine is what you add when there
 is nothing left to add, so **NoTambourine = no padding**. That is why the design is
