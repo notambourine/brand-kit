@@ -8,10 +8,8 @@ description: NoTambourine brand system - colors, tokens, type, spacing, componen
 A boutique engineering agency for leaders whose technology is holding back the business.
 Senior operators work inside the client's org. The constraint may be a legacy commerce stack, a
 revenue-share SaaS, a roadmap nobody can staff for. **Value creation is the deliverable,
-and trust is earned by shipping.** A CEO who wants the culture to change gets that from
-work landing in prod, not from a workshop. Scope holds, so the estimate is worth
-something. AI at the keyboard is why a small team can price this way; it is not what the
-client buys.
+and trust is earned by shipping.** Improve how the organization works through delivery.
+AI at the keyboard is why a small team can price this way; it is not what the client buys.
 
 Define fit by the business constraint and the responsibility we take on. Mention
 private-equity experience when relevant to the conversation. Keep the general positioning
@@ -142,6 +140,10 @@ Concise, warm, playful - in that order.
   Reach for an adjective only where no number exists.
 - **Name the mess without blaming anyone for it.** The client lived every decision that
   built it. Copy that indicts them loses the room.
+- **Express values as commitments.** Show what the client can count on:
+  direct access to the person responsible for delivery, ownership of estimating mistakes
+  within agreed scope, and work and operating knowledge that stay with their team.
+  Describe how coordination works instead of making jokes about ceremony.
 - **Four wordmark forms, and only four.** `NoTambourine` in every human-facing sentence.
   `notambourine` is the technical slug, correct only in a path, URL, domain, GitHub org,
   npm name, or CSS class. `NoTambourine LLC` is the legal entity and appears twice at most
