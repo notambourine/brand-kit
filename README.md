@@ -1,6 +1,6 @@
 # brand-kit
 
-The NoTambourine brand's golden set: `tokens.css`, `components.css`, `deck.css`, the
+The No Tambourine brand's golden set: `tokens.css`, `components.css`, `deck.css`, the
 font binaries, the logo in `logo/`, and `SKILL.md`, which is the written system behind
 them - color, type, spacing, component recipes, and voice.
 
