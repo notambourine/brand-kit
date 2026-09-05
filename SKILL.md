@@ -1,11 +1,12 @@
 ---
 name: system
-description: No Tambourine brand system - colors, tokens, type, spacing, components, deck theme, voice, and the audit that checks work against them. Use when building or styling anything branded for No Tambourine, when asked for the brand colors, or when checking copy before it ships.
+description: NoTambourine brand system - colors, tokens, type, spacing, components, deck theme, voice, and the audit that checks work against them. Use when building or styling anything NoTambourine-branded, when asked for the brand colors, or when checking copy before it ships.
 ---
 
-# No Tambourine brand
+# NoTambourine brand
 
-A boutique engineering agency for leaders whose technology is holding back the business.
+A boutique AI-enabled engineering agency for leaders whose technology is holding back the
+business.
 Senior operators work inside the client's org. The constraint may be a legacy commerce stack, a
 revenue-share SaaS, a roadmap nobody can staff for. **Value creation is the deliverable,
 and trust is earned by shipping.** Improve how the organization works through delivery.
@@ -16,7 +17,7 @@ private-equity experience when relevant to the conversation. Keep the general po
 open to clients regardless of ownership structure.
 
 The name carries the style, not the positioning. A tambourine is what you add when there
-is nothing left to add, so **No Tambourine = no padding**. That is why the design is
+is nothing left to add, so **NoTambourine = no padding**. That is why the design is
 confident type, one decisive pink, lots of air, no decoration.
 
 ## Referrals
@@ -25,7 +26,7 @@ Help a referred reader confirm fit and explain the agency to a colleague. Keep t
 signature "Senior engineers. No tambourine." beside a concrete explanation of the work.
 Use this description for an introduction:
 
-> No Tambourine works inside your team to resolve technology constraints and leaves you
+> NoTambourine works inside your team to resolve technology constraints and leaves you
 > equipped to own the result.
 
 Give referrers recognizable reasons to call:
@@ -51,7 +52,7 @@ returns `text/plain` over plain HTTP with no auth, no signup, and no redirect - 
 |---|---|
 | `notambourine.com/llms.txt` | The index. Start here when you do not know which file you want. |
 | `notambourine.com/AGENTS.md` | What the firm does, who it serves, and the citation rules. |
-| `notambourine.com/SOUL.md` | What No Tambourine believes. The beliefs this design serves. |
+| `notambourine.com/SOUL.md` | What NoTambourine believes. The beliefs this design serves. |
 | `notambourine.com/CULTURE.md` | How the team works. Async-first, one operator per workstream. |
 
 `SOUL.md` and `CULTURE.md` are public cuts of longer internal documents, so absence from
@@ -163,12 +164,16 @@ Concise, warm, playful - in that order.
   direct access to the person responsible for delivery, ownership of estimating mistakes
   within agreed scope, and work and operating knowledge that stay with their team.
   Describe how coordination works instead of making jokes about ceremony.
-- **Write the brand as `No Tambourine`.** Use the space in every human-facing sentence.
+- **Four wordmark forms, and only four.** `NoTambourine` in every human-facing sentence.
   `notambourine` is the technical slug, correct only in a path, URL, domain, GitHub org,
-  npm name, or CSS class. Reserve `NoTambourine LLC` for legal contexts and attribution.
-  In a contract, use it twice at most: the signature block and one Definitions anchor.
-  `NoTambourine` and `Notambourine` are invalid prose forms. Preserve the lowercase
-  lettering in the supplied logo artwork.
+  npm name, or CSS class. `NoTambourine LLC` is the legal entity and appears twice at most
+  in a contract - the signature block and one Definitions anchor - and nowhere else.
+  `Notambourine` is not a valid form. The same rules are published for outside agents at
+  `notambourine.com/AGENTS.md`, so a disputed flag has a public citation.
+- **The spaced form belongs to one line.** `Senior engineers. No tambourine.` is the
+  signature, and it stands alone - a tagline, a slide, a sign-off, an email footer. Never
+  split the wordmark inside a sentence, and never let the signature carry the sentence's
+  meaning.
 - **Sentence case everywhere** - headlines, buttons, nav, labels. "Get started", not
   "Get Started". The lockup renders lowercase.
 - **ALL CAPS has one job:** the pink eyebrow above a heading, tracked `+0.08em`. Never a
@@ -179,7 +184,7 @@ Concise, warm, playful - in that order.
   apostrophe. No em dash, no en dash, no curly quote, no single-character ellipsis. The
   site source ships zero of each, and an em dash is the most reported AI tell in
   marketing copy. The interpunct stays, because the brand uses it as a separator:
-  `Tom Fuertes · Principal · No Tambourine`.
+  `Tom Fuertes · Principal · NoTambourine`.
 - **Yes:** "Senior engineers. No tambourine." · "Two engineers, six weeks, one shipped
   feature." · "Tell us what you're building. We'll write back the same day."
 - **No:** "Unlock your team's full potential with our proven 7-phase framework!" ·
@@ -188,7 +193,7 @@ Concise, warm, playful - in that order.
 ### Public copy carries no AI tells
 
 Read anything a stranger sees for these tells: hero, section body, email, deck,
-proposal, README. No Tambourine sells the absence of padding, so padded copy argues
+proposal, README. NoTambourine sells the absence of padding, so padded copy argues
 against the pitch. Four tells land hardest in consultancy copy:
 
 - Puffery adjectives. "Boutique" is specific and true; "proven", "world-class",
@@ -241,8 +246,11 @@ file with them.
 # Wordmark: lowercase in prose, outside code, paths, and URLs
 grep -nE '(^|[^/.\-_a-z`])notambourine([^/.\-_a-z`]|$)' <file>
 
-# Unspaced prose forms; exclude the legal entity when reviewing hits
-grep -nE 'NoTambourine|Notambourine' <file>
+# Sentence case: never a valid form
+grep -n 'Notambourine' <file>
+
+# Spaced form: valid only in the signature line
+grep -niE 'No[[:space:]]+Tambourine' <file>
 
 # Legal entity, 2x max (signature block + Definitions anchor)
 grep -nc 'NoTambourine LLC' <file>
@@ -284,8 +292,8 @@ alone - they read as tells and stay.
 **Ignore:** the slug in frontmatter, paths, URLs, CSS classes, npm names, GH remotes, and
 anything inside a code fence or backticks (the wordmark pattern already excludes them). A
 puffery word used literally about a thing rather than as a boast - "a robust error path".
-`NoTambourine LLC` in a legal context or attribution, and the supplied logo's lettering.
-`I` inside a quotation, a code identifier, or a name.
+The spaced form inside the signature line, standing on its own. `I` inside a quotation, a
+code identifier, or a name.
 
 **Judge a hit two ways.** For the wordmark: would a client reading this expect the
 wordmark or the slug? A path, URL, or identifier is the slug, so ignore it. For
