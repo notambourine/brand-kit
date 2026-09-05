@@ -151,8 +151,12 @@ Concise, warm, playful - in that order.
   inside it. A proposal or SOW names the parties. Never "I".
 - **A client deliverable does not sell.** No logo wall, no team slide, no methodology.
   Explain the client's own system back to them and let the restraint be the credential.
-- **Proof is a count, not an adjective.** Use the client's own numbers, before and after.
-  Reach for an adjective only where no number exists.
+- **Proof shows an observable change.** Use the client's own numbers where available.
+  Show what was blocked, what changed, and what their team can now own. Include reduced
+  operating burden and client independence. Without a number, describe a verifiable
+  before and after. Share client evidence only with permission.
+- **Make accountability personal.** Name who joins the engagement and who owns delivery.
+  Let warmth come through direct, helpful language about working together.
 - **Name the mess without blaming anyone for it.** The client lived every decision that
   built it. Copy that indicts them loses the room.
 - **Express values as commitments.** Show what the client can count on:
@@ -214,8 +218,8 @@ Three brand fixtures read as tells and must survive the read:
   **Body and mono** JetBrains Mono 400. Monospace body is the practitioner signal; it is
   the point, not an accident. Every face is variable across its full axis, so no weight
   here is ever synthesized.
-- **The rounded lockup carries the play; the headings stay sober.** The reader is a PE
-  operating partner, so only the lockup gets to be warm.
+- **Keep the rounded lockup playful and the headings clear.** Use warm, direct language
+  throughout. Visual restraint should make the work easy to understand.
 - Body runs `1.7` leading and `+0.01em` tracking. Monospace at a sans's 1.55 reads cramped.
 - Tracking tightens as size grows: `--ls-tight` (-0.02em) is the floor, and `--ls-display`
   (-0.03em) is what hero type above ~56px wants. Zero on body, +0.08em on ALL-CAPS eyebrows.
