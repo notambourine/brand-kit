@@ -19,6 +19,21 @@ The name carries the style, not the positioning. A tambourine is what you add wh
 is nothing left to add, so **NoTambourine = no padding**. That is why the design is
 confident type, one decisive pink, lots of air, no decoration.
 
+## Referrals
+
+Help a referred reader confirm fit and explain the agency to a colleague. Keep the
+signature "Senior engineers. No tambourine." beside a concrete explanation of the work.
+Use this description for an introduction:
+
+> NoTambourine works inside your team to resolve technology constraints and leaves you
+> equipped to own the result.
+
+Give referrers recognizable reasons to call:
+
+- A commerce platform limits what the business can do.
+- Vendor dependence makes necessary changes too costly or slow.
+- An important roadmap needs capacity the team cannot staff.
+
 ## Offers
 
 Use these names in copy and examples. Describe the client's outcome before staffing.
