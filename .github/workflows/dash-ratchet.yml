@@ -1,11 +1,17 @@
 name: Dash ratchet
 
-# Unicode dashes may only ever decrease. The engine, the runner tier, and the
-# timeout live in notambourine/dash-ratchet; this file owns the trigger.
+# Zero unicode dashes in the tree. The engine, the runner tier, and the timeout
+# live in notambourine/dash-ratchet; this file owns the trigger and the mode.
 # Contract and inputs: https://github.com/notambourine/dash-ratchet
 #
-# PR-only on purpose: the check compares a head against its base, and on a push
-# to a trunk branch there is nothing left to block - the code has already landed.
+# force-zero, not the ratchet: the repo is already at zero, so a count to
+# compare buys nothing and the base-ref resolve is complexity with no payoff.
+# One tree, one grep, depth 1 - and it catches a dash the PR never touched.
+#
+# exclude-defaults off because nothing here is a package manager's or an agent's
+# bytes: no lockfile, no vendored tree, and the two licenses carry no dash.
+#
+# PR-only on purpose: on a push to main there is nothing left to block.
 
 concurrency:
   group: dashes-pr-${{ github.event.pull_request.number }}
@@ -21,3 +27,6 @@ permissions:
 jobs:
   dashes:
     uses: notambourine/dash-ratchet/.github/workflows/ratchet.yml@ac19421270755a042257789a577d5aa423b46b82 # v0.3.0
+    with:
+      force-zero: true
+      exclude-defaults: false
