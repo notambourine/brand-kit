@@ -168,12 +168,11 @@ Concise, warm, playful - in that order.
   `notambourine` is the technical slug, correct only in a path, URL, domain, GitHub org,
   npm name, or CSS class. `NoTambourine LLC` is the legal entity and appears twice at most
   in a contract - the signature block and one Definitions anchor - and nowhere else.
-  `Notambourine` is not a valid form. The same rules are published for outside agents at
-  `notambourine.com/AGENTS.md`, so a disputed flag has a public citation.
-- **The spaced form belongs to one line.** `Senior engineers. No tambourine.` is the
-  signature, and it stands alone - a tagline, a slide, a sign-off, an email footer. Never
-  split the wordmark inside a sentence, and never let the signature carry the sentence's
-  meaning.
+  `Notambourine` and `No Tambourine` are not valid forms. The same rules are published for
+  outside agents at `notambourine.com/AGENTS.md`, so a disputed flag has a public citation.
+- **The signature is a sentence, not a wordmark.** In `Senior engineers. No tambourine.`,
+  `tambourine` is the instrument, lowercase, and the line stands alone - a tagline, a
+  slide, a sign-off, an email footer. Nothing else may split the wordmark across a space.
 - **Sentence case everywhere** - headlines, buttons, nav, labels. "Get started", not
   "Get Started". The lockup renders lowercase.
 - **ALL CAPS has one job:** the pink eyebrow above a heading, tracked `+0.08em`. Never a
@@ -249,8 +248,8 @@ grep -nE '(^|[^/.\-_a-z`])notambourine([^/.\-_a-z`]|$)' <file>
 # Sentence case: never a valid form
 grep -n 'Notambourine' <file>
 
-# Spaced form: valid only in the signature line
-grep -niE 'No[[:space:]]+Tambourine' <file>
+# Spaced form: never a valid form (lowercase is the instrument, in the signature line)
+grep -nE 'No[[:space:]]+Tambourine' <file>
 
 # Legal entity, 2x max (signature block + Definitions anchor)
 grep -nc 'NoTambourine LLC' <file>
@@ -292,8 +291,7 @@ alone - they read as tells and stay.
 **Ignore:** the slug in frontmatter, paths, URLs, CSS classes, npm names, GH remotes, and
 anything inside a code fence or backticks (the wordmark pattern already excludes them). A
 puffery word used literally about a thing rather than as a boast - "a robust error path".
-The spaced form inside the signature line, standing on its own. `I` inside a quotation, a
-code identifier, or a name.
+`I` inside a quotation, a code identifier, or a name.
 
 **Judge a hit two ways.** For the wordmark: would a client reading this expect the
 wordmark or the slug? A path, URL, or identifier is the slug, so ignore it. For
