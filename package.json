@@ -23,7 +23,8 @@
     "*.css",
     "fonts",
     "logo",
-    "SKILL.md"
+    "SKILL.md",
+    "references"
   ],
   "publishConfig": {
     "access": "public"
