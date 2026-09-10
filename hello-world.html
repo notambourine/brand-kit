@@ -1,107 +1,194 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hello world · NoTambourine</title>
-<link rel="stylesheet" href="tokens.css">
-<link rel="stylesheet" href="components.css">
-<style>
-  /* Page scaffolding only: every brand value comes from the two stylesheets. */
-  body   { margin: 0; }
-  main   { max-width: 640px; margin: 0 auto; padding: var(--sp-16) var(--sp-6) var(--sp-20); }
-  .stack { display: flex; flex-direction: column; gap: var(--sp-6); }
-  .row   { display: flex; align-items: center; gap: var(--sp-3); flex-wrap: wrap; }
-  .grid  { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-4); }
-  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello world · NoTambourine</title>
+    <meta
+      name="description"
+      content="Senior engineers working inside your team to build the systems and ways of working your business needs next."
+    />
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="components.css" />
+    <style>
+      /* Page scaffolding only: every brand value comes from the two stylesheets. */
+      body {
+        margin: 0;
+      }
+      main {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: var(--sp-16) var(--sp-6) var(--sp-20);
+      }
+      .stack {
+        display: flex;
+        flex-direction: column;
+        gap: var(--sp-6);
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: var(--sp-3);
+        flex-wrap: wrap;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-4);
+      }
+      @media (max-width: 560px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nt-nav">
+      <span class="nt-nav__brand">NoTambourine</span>
+      <div class="nt-nav__links">
+        <a href="#" aria-current="page">Practice</a>
+        <a href="#">Engagements</a>
+        <a href="#">Writing</a>
+      </div>
+      <span style="margin-left: auto"></span>
+      <button class="nt-btn nt-btn--primary nt-btn--sm">
+        Start a conversation
+      </button>
+    </nav>
 
-<nav class="nt-nav">
-  <span class="nt-nav__brand">notambourine</span>
-  <div class="nt-nav__links">
-    <a href="#" aria-current="page">Practice</a>
-    <a href="#">Engagements</a>
-    <a href="#">Writing</a>
-  </div>
-  <span style="margin-left:auto"></span>
-  <button class="nt-btn nt-btn--primary nt-btn--sm">Start a conversation</button>
-</nav>
+    <main class="stack">
+      <div class="stack" style="gap: var(--sp-4)">
+        <span class="eyebrow">Hello world</span>
+        <h1 class="display">
+          Build the systems and ways of working your business needs
+          <em>next</em>.
+        </h1>
+        <p class="lede">
+          NoTambourine brings senior engineers into your team to lead delivery.
+        </p>
+      </div>
 
-<main class="stack">
+      <div class="row">
+        <button class="nt-btn nt-btn--primary">Start a conversation</button>
+        <button class="nt-btn nt-btn--secondary">See how it works</button>
+        <button class="nt-btn nt-btn--ghost">Skip for now</button>
+      </div>
 
-  <div class="stack" style="gap:var(--sp-4)">
-    <span class="eyebrow">Hello world</span>
-    <!-- One pink word, via <em>. Hanken Grotesk has a drawn italic, so it slants too. -->
-    <h1 class="display">Senior engineers.<br>No <em>tambourine</em>.</h1>
-    <p class="lede">An engineering agency for leaders whose technology is holding back
-      the business. Senior operators work inside your team and ship.</p>
-  </div>
+      <div class="nt-card">
+        <h4>What you can count on</h4>
+        <ul>
+          <li>You speak directly with the person responsible for delivery.</li>
+          <li>
+            Within agreed scope, you don't pay for our estimating mistakes.
+          </li>
+        </ul>
+      </div>
 
-  <div class="row">
-    <button class="nt-btn nt-btn--primary">Start a conversation</button>
-    <button class="nt-btn nt-btn--secondary">See how it works</button>
-    <button class="nt-btn nt-btn--ghost">Skip for now</button>
-  </div>
+      <div class="row">
+        <span class="nt-badge nt-badge--pink"
+          ><span class="nt-badge__dot"></span>Live</span
+        >
+        <span class="nt-badge nt-badge--mint"
+          ><span class="nt-badge__dot"></span>Synced</span
+        >
+        <span class="nt-badge nt-badge--ink">New</span>
+        <span class="nt-badge nt-badge--outline">Beta</span>
+      </div>
 
-  <div class="nt-card">
-    <h4>What you can count on</h4>
-    <ul>
-      <li>You speak directly with the person responsible for delivery.</li>
-      <li>Within agreed scope, you don't pay for our estimating mistakes.</li>
-      <li>The work and operating knowledge stay with your team.</li>
-    </ul>
-  </div>
+      <div class="stack" style="gap: var(--sp-4)">
+        <h2>Make your systems work <em>harder</em> for your business.</h2>
+        <p>
+          Automate routine work and connect the systems your team relies on.
+        </p>
+      </div>
 
-  <div class="row">
-    <span class="nt-badge nt-badge--pink"><span class="nt-badge__dot"></span>Live</span>
-    <span class="nt-badge nt-badge--mint"><span class="nt-badge__dot"></span>Synced</span>
-    <span class="nt-badge nt-badge--ink">New</span>
-    <span class="nt-badge nt-badge--outline">Beta</span>
-  </div>
+      <div class="grid">
+        <div class="nt-card nt-card--hover">
+          <h4>Assessment</h4>
+          <p style="margin-top: var(--sp-2)">
+            Decide what to build or change first. Review the technology and
+            working processes against your business priorities and choose the
+            next investment.
+          </p>
+        </div>
+        <div class="nt-card nt-card--hover nt-card--accent">
+          <h4>Embedded</h4>
+          <p style="margin-top: var(--sp-2)">
+            Put senior engineers inside your team to lead delivery. Build the
+            systems and ways of working your business needs next.
+          </p>
+        </div>
+      </div>
 
-  <div class="grid">
-    <div class="nt-card nt-card--hover">
-      <h4>Assessment</h4>
-      <p style="margin-top:var(--sp-2)">Understand what's holding your business back.
-        Decide which technology constraint to address first.</p>
-    </div>
-    <div class="nt-card nt-card--hover nt-card--accent">
-      <h4>Embedded</h4>
-      <p style="margin-top:var(--sp-2)">Senior operators work inside your team.
-        Get the operating leadership and delivery the work needs.</p>
-    </div>
-  </div>
+      <div class="nt-field">
+        <label for="email">Email</label>
+        <input
+          class="nt-input"
+          id="email"
+          type="email"
+          placeholder="you@studio.work"
+        />
+        <span class="nt-hint">We'll write back the same day.</span>
+      </div>
 
-  <div class="nt-field">
-    <label for="email">Email</label>
-    <input class="nt-input" id="email" type="email" placeholder="you@studio.work">
-    <span class="nt-hint">We'll write back the same day.</span>
-  </div>
+      <div class="grid">
+        <div class="nt-toggle-row">
+          <span
+            style="
+              flex: 1;
+              font-size: var(--fs-small);
+              font-weight: var(--fw-semibold);
+              color: var(--fg1);
+            "
+            >Email me</span
+          >
+          <button
+            class="nt-switch"
+            role="switch"
+            aria-checked="true"
+            aria-label="Email me"
+          ></button>
+        </div>
+        <div class="nt-toggle-row">
+          <!-- A button, not a span: it tabs and clicks with no extra attributes. -->
+          <button
+            class="nt-radio"
+            role="radio"
+            aria-checked="true"
+            aria-label="AI engineering"
+          ></button>
+          <span
+            style="
+              font-size: var(--fs-small);
+              font-weight: var(--fw-medium);
+              color: var(--fg1);
+            "
+            >AI engineering</span
+          >
+        </div>
+      </div>
 
-  <div class="grid">
-    <div class="nt-toggle-row">
-      <span style="flex:1;font-size:var(--fs-small);font-weight:var(--fw-semibold);color:var(--fg1)">Email me</span>
-      <button class="nt-switch" role="switch" aria-checked="true" aria-label="Email me"></button>
-    </div>
-    <div class="nt-toggle-row">
-      <!-- A button, not a span: it tabs and clicks with no extra attributes. -->
-      <button class="nt-radio" role="radio" aria-checked="true" aria-label="AI engineering"></button>
-      <span style="font-size:var(--fs-small);font-weight:var(--fw-medium);color:var(--fg1)">AI engineering</span>
-    </div>
-  </div>
+      <!-- Mint is structural: a border and a status dot, never a CTA. -->
+      <div class="nt-card nt-card--support">
+        <span class="nt-badge nt-badge--mint"
+          ><span class="nt-badge__dot"></span>Availability</span
+        >
+        <p style="margin-top: var(--sp-2)">
+          Tell us what you want to accomplish and when. We'll discuss fit and
+          availability with you.
+        </p>
+      </div>
 
-  <!-- Mint is structural: a border and a status dot, never a CTA. -->
-  <div class="nt-card nt-card--support">
-    <span class="nt-badge nt-badge--mint"><span class="nt-badge__dot"></span>Availability</span>
-    <p style="margin-top:var(--sp-2)">Tell us what you need and when.
-      We'll discuss fit and availability with you.</p>
-  </div>
+      <p>Senior engineers. No tambourine.</p>
 
-  <p><small>Tokens live in <code>tokens.css</code> &middot; recipes in
-    <code>components.css</code> &middot; rules in <a href="#">SKILL.md</a></small></p>
-
-</main>
-</body>
+      <p>
+        <small
+          >Tokens live in <code>tokens.css</code> &middot; recipes in
+          <code>components.css</code> &middot; rules in
+          <a href="#">SKILL.md</a></small
+        >
+      </p>
+    </main>
+  </body>
 </html>

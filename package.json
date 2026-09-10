@@ -1,7 +1,7 @@
 {
   "name": "@notambourine/brand-kit",
   "version": "1.3.0",
-  "description": "The NoTambourine brand's golden set: tokens, element styles, deck theme, faces, and logo",
+  "description": "NoTambourine brand assets and guidance for design, decks, and copy",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,6 +18,11 @@
   ],
   "author": "NoTambourine LLC",
   "type": "module",
+  "scripts": {
+    "format": "prettier --write \"**/*.{md,mdx,html,json,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{md,mdx,html,json,yml,yaml}\"",
+    "prepack": "npm run format:check"
+  },
   "//": "No exports map: consumers import stylesheets and logo files by path, and their vendor scripts walk fonts/ and logo/ whole. A map would restate the tree and go stale the first time a file is added.",
   "files": [
     "*.css",
@@ -31,5 +36,8 @@
   },
   "sideEffects": [
     "*.css"
-  ]
+  ],
+  "devDependencies": {
+    "prettier": "3.9.6"
+  }
 }

@@ -8,9 +8,6 @@ name: Dash ratchet
 # compare buys nothing and the base-ref resolve is complexity with no payoff.
 # One tree, one grep, depth 1 - and it catches a dash the PR never touched.
 #
-# exclude-defaults off because nothing here is a package manager's or an agent's
-# bytes: no lockfile, no vendored tree, and the two licenses carry no dash.
-#
 # PR-only on purpose: on a push to main there is nothing left to block.
 
 concurrency:
