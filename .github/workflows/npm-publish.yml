@@ -1,8 +1,8 @@
 name: Publish
 
 # Publishes @notambourine/brand-kit when a merge to main carries a version the registry
-# does not have yet. The manifest is the trigger; the v* tag is written after the publish
-# lands, so a tag never exists for a version npm rejected.
+# does not have yet. The manifest is the trigger; the v* tag and its GitHub release are
+# written after the publish lands, so neither exists for a version npm rejected.
 # Trusted publishing, so there is no NPM_TOKEN to leak and npm signs provenance on its own.
 # The trusted publisher on npmjs.com must name this file: npm-publish.yml
 # https://docs.npmjs.com/trusted-publishers
@@ -67,11 +67,12 @@ jobs:
         run: npm publish
 
       - if: steps.check.outputs.publish == 'true'
-        name: Tag the published commit
+        name: Tag and release the published commit
         env:
           GH_TOKEN: ${{ github.token }}
           VERSION: ${{ steps.check.outputs.version }}
         run: |
-          gh api "repos/$GITHUB_REPOSITORY/git/refs" \
-            -f "ref=refs/tags/v$VERSION" \
-            -f "sha=$GITHUB_SHA"
+          gh release create "v$VERSION" \
+            --target "$GITHUB_SHA" \
+            --title "v$VERSION" \
+            --generate-notes
