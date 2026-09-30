@@ -18,6 +18,10 @@ throughout delivery, and own the work from business goal to shipped system. Name
 the software, data, or infrastructure needed to reach that goal. Keep the time
 between a decision and working software short.
 
+Work inside the client's process: their repos, rituals, approvals, and way of
+buying. Push back when work stalls quietly. Name what a wait is costing and
+treat each request for more certainty as work someone has to do.
+
 Treat AI as a working capability. Explain where it speeds up delivery, automates
 work, improves a product, or helps a team use its information. Name the result,
 not the novelty. Do not make broad claims about transformation or intelligence.
@@ -53,15 +57,11 @@ what the client wants to accomplish, why now, and what will change after it
 ships. In proposals, connect each constraint to its business consequence and the
 work required.
 
-Use these offer names:
-
-- **Assessment:** Choose what to build or change next. Review the systems,
-  workflows, and priorities, then set the delivery plan.
-- **Embedded:** Add senior engineers who build with AI to your team. We own
-  delivery and ship the systems your business needs next.
+Shape the engagement around how the client already buys and works. Do not
+publish fixed offers, deal terms, or scope guarantees.
 
 Use "Start a conversation" for the primary invitation. Ask what the reader wants
-to ship and when. Discuss fit before asking them to choose an engagement.
+to ship and when. Discuss fit before shaping an engagement.
 
 ## Register and evidence
 
@@ -73,8 +73,7 @@ to ship and when. Discuss fit before asking them to choose an engagement.
 - Show the objective, what shipped, and what the client can now do. Use client
   numbers when available. Otherwise use a verifiable before and after. Share
   client evidence only with permission.
-- Name who joins and owns delivery. Promise direct access to that person. Cover
-  our estimating mistakes within the agreed scope.
+- Name who joins and owns delivery.
 - Describe constraints without blaming the people who built the system.
 
 ## Names and mechanics
