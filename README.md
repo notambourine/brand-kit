@@ -12,6 +12,7 @@ Correct a brand value here. Every other copy is downstream.
 | `vars.css`       | The values alone, for a surface with its own faces and base layer. |
 | `components.css` | `.nt-btn`, `.nt-card`, `.nt-nav`, and the rest, all `var()`-based. |
 | `deck.css`       | The Marpit slide theme, 1280x720. Load `vars.css` on the page too. |
+| `prose.css`      | `.nt-prose` for rendered markdown, on screen and on paper.         |
 | `logo/`          | The mark, the lockup, the icons, and the rasters cut from them.    |
 
 ## Logo
