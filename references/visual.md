@@ -26,6 +26,9 @@ Read exact values and component behavior from the CSS.
 - Keep body copy in one column, at most about 640px wide. Use two or three
   columns for card grids, one on mobile, never four. Leave generous space
   between blocks.
+- Wrap long-form documents in `.nt-prose` from `prose.css`. In a document, pink
+  marks links alone, and links carry an underline. Set density on the container:
+  the body tokens on screen, about 10.5pt on paper.
 - Make nav the only sticky element. No sticky CTAs, chat bubbles, or cookie
   banners.
 
