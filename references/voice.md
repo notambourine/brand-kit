@@ -1,11 +1,19 @@
 # Voice and copy audit
 
-Lead public pages and introductions with who joins and what they will ship. Use
-this tagline for page titles, sign-offs, slides, and footers:
+Open public pages and introductions with the category line:
+
+> NoTambourine · a boutique AI-native engineering agency
+
+Drop the name where the wordmark already shows it, and set the rest as an
+eyebrow: `Boutique AI-native engineering agency`.
+
+Follow it with the tagline. Use the tagline alone for page titles, sign-offs,
+slides, and footers:
 
 > Engineering you can see in the numbers.
 
-Keep a client result beside it.
+Then say who joins and what they will ship, and keep a client result beside it.
+The category line is the only place AI leads; elsewhere, name what AI changes.
 
 For existing systems, use:
 
