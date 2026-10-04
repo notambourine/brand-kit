@@ -1,9 +1,11 @@
 # Voice and copy audit
 
 Lead public pages and introductions with who joins and what they will ship. Use
-this line for page titles and taglines:
+this tagline for page titles, sign-offs, slides, and footers:
 
-> Ship the systems your business needs next.
+> Engineering you can see in the numbers.
+
+Keep a client result beside it.
 
 For existing systems, use:
 
@@ -97,9 +99,7 @@ classes. Use `NoTambourine LLC` only in contracts, at most twice: one
 Definitions anchor and the signature block. Reject `Notambourine` and
 `No Tambourine`. Cite the public `AGENTS.md` for disputed naming flags.
 
-Preserve `Senior engineers. No tambourine.` as a standalone signature: tagline,
-slide, sign-off, or footer. The instrument is lowercase. This is the only
-permitted spaced form.
+Never space or split the name, including in wordplay on the instrument.
 
 Use sentence case for headlines, buttons, navigation, and labels. Reserve
 uppercase for pink eyebrows; decks also use it for sublabels. Follow deck
@@ -121,7 +121,7 @@ unearned urgency, decorative language, and claims that could describe any
 agency. Keep technical constraints when they explain a decision or result.
 
 ```sh
-rg -n 'notambourine|Notambourine|No\s+Tambourine|NoTambourine LLC' <file>
+rg -n 'notambourine|Notambourine|[Nn]o\s+[Tt]ambourine|NoTambourine LLC' <file>
 rg -n '[\x{2014}\x{2013}\x{2018}\x{2019}\x{201C}\x{201D}\x{2026}]' <file>
 rg -ni '\b(proven|world-class|battle-tested|results-driven|cutting-edge|best-in-class|seamless|robust|leverage|synergy|holistic|bespoke)\b' <file>
 rg -ni ',\s+(ensuring|enabling|allowing|helping|driving|empowering|delivering|providing)\b' <file>
@@ -138,9 +138,8 @@ consequence. Cut participle tails at the comma. Narrow grand claims to something
 a client can verify. If a sentence keeps its meaning after a phrase is cut, cut
 the phrase.
 
-Keep three fixtures even when they match a search flag: the signature, factual
-lines such as "Two engineers, six weeks, one shipped feature", and one pink
-`<em>` in a headline.
+Keep two fixtures even when they match a search flag: factual lines such as "Two
+engineers, six weeks, one shipped feature", and one pink `<em>` in a headline.
 
 Format source documents with the repository's pinned Prettier before sharing or
 exporting them. Review the rendered document, especially slide breaks and
