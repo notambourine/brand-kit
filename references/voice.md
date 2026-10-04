@@ -1,8 +1,11 @@
 # Voice and copy audit
 
-Lead public pages and introductions with:
+Lead public pages and introductions with who joins and what they will ship. Use
+this tagline for page titles, sign-offs, slides, and footers:
 
-> Ship the systems your business needs next.
+> Engineering you can see in the numbers.
+
+Keep a client result beside it.
 
 For existing systems, use:
 
@@ -15,8 +18,9 @@ plainly and warmly. Use humor only when it makes the point clearer.
 
 Position NoTambourine as senior engineers who join the client's team, use AI
 throughout delivery, and own the work from business goal to shipped system. Name
-the software, data, or infrastructure needed to reach that goal. Keep the time
-between a decision and working software short.
+the software, data, or infrastructure needed to reach that goal. Plan each
+project around the business result it should produce. Keep the time between a
+decision and working software short.
 
 Work inside the client's process: their repos, rituals, approvals, and way of
 buying. Push back when work stalls quietly. Name what a wait is costing and
@@ -37,20 +41,30 @@ any ownership structure. The name means no padding.
 
 Use this introduction:
 
-> Ship the systems your business needs next. NoTambourine brings senior
-> engineers into your team to own delivery and build with AI.
+> NoTambourine puts senior engineers inside your team to lead delivery. We take
+> on platform migrations, redesigns, site speed work, and ongoing engineering.
+> We plan each project around the business result it should produce.
+
+Follow it with the most recent result the client has approved:
+
+> After our most recent redesign launched, traffic rose 20% and conversion rate
+> rose 20% on top of it.
 
 For a meta description or short directory listing, use:
 
-> Senior engineers using AI inside your team to ship the systems your business
-> needs next.
+> Senior engineers who join your team and lead delivery. We handle platform
+> migrations, redesigns, site speed, and ongoing engineering.
 
-Give clear reasons to call: launching a product, improving a core system,
-automating routine work, or connecting systems and data. Describe the shipped
-change in daily terms. A file arrives automatically. An order moves between
-systems. A team releases an update. A customer gets a useful answer. Support
-claims about growth, time saved, reliability, or delivery speed with client
-evidence.
+Say "platform", not a vendor name, in general positioning. Name the vendor only
+in that vendor's directory or when the reader runs on it.
+
+Give clear reasons to call: a platform migration, a redesign, site speed, or
+ongoing engineering. Add launching a product, automating routine work, or
+connecting systems and data when the reader's goal calls for it. Describe the
+shipped change in daily terms. Pages load faster. The new site launches without
+losing traffic. An order moves between systems. A team releases an update.
+Support claims about growth, time saved, reliability, or delivery speed with
+client evidence.
 
 Keep public positioning open to a new ambition or an existing constraint. Ask
 what the client wants to accomplish, why now, and what will change after it
@@ -72,7 +86,8 @@ to ship and when. Discuss fit before shaping an engagement.
   the decisions to make, and the work to ship.
 - Show the objective, what shipped, and what the client can now do. Use client
   numbers when available. Otherwise use a verifiable before and after. Share
-  client evidence only with permission.
+  client evidence only with permission. For an unnamed client, state the metric,
+  the comparison, and how long it was measured.
 - Name who joins and owns delivery.
 - Describe constraints without blaming the people who built the system.
 
@@ -84,9 +99,7 @@ classes. Use `NoTambourine LLC` only in contracts, at most twice: one
 Definitions anchor and the signature block. Reject `Notambourine` and
 `No Tambourine`. Cite the public `AGENTS.md` for disputed naming flags.
 
-Preserve `Senior engineers. No tambourine.` as a standalone signature: tagline,
-slide, sign-off, or footer. The instrument is lowercase. This is the only
-permitted spaced form.
+Never space or split the name, including in wordplay on the instrument.
 
 Use sentence case for headlines, buttons, navigation, and labels. Reserve
 uppercase for pink eyebrows; decks also use it for sublabels. Follow deck
@@ -108,7 +121,7 @@ unearned urgency, decorative language, and claims that could describe any
 agency. Keep technical constraints when they explain a decision or result.
 
 ```sh
-rg -n 'notambourine|Notambourine|No\s+Tambourine|NoTambourine LLC' <file>
+rg -n 'notambourine|Notambourine|[Nn]o\s+[Tt]ambourine|NoTambourine LLC' <file>
 rg -n '[\x{2014}\x{2013}\x{2018}\x{2019}\x{201C}\x{201D}\x{2026}]' <file>
 rg -ni '\b(proven|world-class|battle-tested|results-driven|cutting-edge|best-in-class|seamless|robust|leverage|synergy|holistic|bespoke)\b' <file>
 rg -ni ',\s+(ensuring|enabling|allowing|helping|driving|empowering|delivering|providing)\b' <file>
@@ -125,9 +138,8 @@ consequence. Cut participle tails at the comma. Narrow grand claims to something
 a client can verify. If a sentence keeps its meaning after a phrase is cut, cut
 the phrase.
 
-Keep three fixtures even when they match a search flag: the signature, factual
-lines such as "Two engineers, six weeks, one shipped feature", and one pink
-`<em>` in a headline.
+Keep two fixtures even when they match a search flag: factual lines such as "Two
+engineers, six weeks, one shipped feature", and one pink `<em>` in a headline.
 
 Format source documents with the repository's pinned Prettier before sharing or
 exporting them. Review the rendered document, especially slide breaks and
