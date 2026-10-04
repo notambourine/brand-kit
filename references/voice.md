@@ -1,6 +1,7 @@
 # Voice and copy audit
 
-Lead public pages and introductions with:
+Lead public pages and introductions with who joins and what they will ship. Use
+this line for page titles and taglines:
 
 > Ship the systems your business needs next.
 
@@ -15,8 +16,9 @@ plainly and warmly. Use humor only when it makes the point clearer.
 
 Position NoTambourine as senior engineers who join the client's team, use AI
 throughout delivery, and own the work from business goal to shipped system. Name
-the software, data, or infrastructure needed to reach that goal. Keep the time
-between a decision and working software short.
+the software, data, or infrastructure needed to reach that goal. Plan each
+project around the business result it should produce. Keep the time between a
+decision and working software short.
 
 Work inside the client's process: their repos, rituals, approvals, and way of
 buying. Push back when work stalls quietly. Name what a wait is costing and
@@ -37,20 +39,30 @@ any ownership structure. The name means no padding.
 
 Use this introduction:
 
-> Ship the systems your business needs next. NoTambourine brings senior
-> engineers into your team to own delivery and build with AI.
+> NoTambourine puts senior engineers inside your team to lead delivery. We take
+> on platform migrations, redesigns, site speed work, and ongoing engineering.
+> We plan each project around the business result it should produce.
+
+Follow it with the most recent result the client has approved:
+
+> After our most recent redesign launched, traffic rose 20% and conversion rate
+> rose 20% on top of it.
 
 For a meta description or short directory listing, use:
 
-> Senior engineers using AI inside your team to ship the systems your business
-> needs next.
+> Senior engineers who join your team and lead delivery. We handle platform
+> migrations, redesigns, site speed, and ongoing engineering.
 
-Give clear reasons to call: launching a product, improving a core system,
-automating routine work, or connecting systems and data. Describe the shipped
-change in daily terms. A file arrives automatically. An order moves between
-systems. A team releases an update. A customer gets a useful answer. Support
-claims about growth, time saved, reliability, or delivery speed with client
-evidence.
+Say "platform", not a vendor name, in general positioning. Name the vendor only
+in that vendor's directory or when the reader runs on it.
+
+Give clear reasons to call: a platform migration, a redesign, site speed, or
+ongoing engineering. Add launching a product, automating routine work, or
+connecting systems and data when the reader's goal calls for it. Describe the
+shipped change in daily terms. Pages load faster. The new site launches without
+losing traffic. An order moves between systems. A team releases an update.
+Support claims about growth, time saved, reliability, or delivery speed with
+client evidence.
 
 Keep public positioning open to a new ambition or an existing constraint. Ask
 what the client wants to accomplish, why now, and what will change after it
@@ -72,7 +84,8 @@ to ship and when. Discuss fit before shaping an engagement.
   the decisions to make, and the work to ship.
 - Show the objective, what shipped, and what the client can now do. Use client
   numbers when available. Otherwise use a verifiable before and after. Share
-  client evidence only with permission.
+  client evidence only with permission. For an unnamed client, state the metric,
+  the comparison, and how long it was measured.
 - Name who joins and owns delivery.
 - Describe constraints without blaming the people who built the system.
 
