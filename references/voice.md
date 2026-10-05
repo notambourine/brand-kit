@@ -85,7 +85,9 @@ to ship and when. Discuss fit before shaping an engagement.
 
 ## Register and evidence
 
-- Choose "you", "we", or named parties by artifact, per `doctrine/CULTURE.md`.
+- Speak to the reader as "you" in site and marketing copy. In a client
+  deliverable, "we" means the client's organization with us inside it. A
+  proposal or SOW names the parties. Never write "I".
 - Keep sales material out of client deliverables. Explain the client's system,
   the decisions to make, and the work to ship.
 - Show the objective, what shipped, and what the client can now do. Use client

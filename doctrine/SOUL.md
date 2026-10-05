@@ -1,54 +1,53 @@
-# NoTambourine Soul
+# NoTambourine's soul: what we believe
 
 NoTambourine · a boutique AI-native engineering agency. We put senior engineers
-inside a client's team and plan each project around a business result the client
-can see in the numbers.
+inside your team and plan each project around a business result you can see in
+the numbers.
 
-## Deliver the client's direction, improve the process
+## Work inside the client's process
 
-We take the client's direction as the brief and own the work against it, from
-their repositories, rituals, approvals, and conversations. Working inside the
-process shows us where it slows delivery, so improving it is part of the
-engagement: a review that holds every ticket, an approval that guards little, a
-release that waits on a meeting. The person shaping the approach stays close
-enough to the work to see whether it survives contact with reality.
+We take your direction as the brief and own the work against it, from inside
+your repositories, rituals, approvals, and conversations. Working there shows us
+where the process slows delivery, so we improve it as part of the engagement: a
+review that holds every ticket, an approval that guards little, a release that
+waits on a meeting. The person shaping the approach stays close enough to the
+work to see whether it holds up.
 
-## Build partnerships, not dependency
+## Be a catalyst, not a crutch
 
-An engagement should leave the client more capable than it started. The
-automation, runbooks, workflows, and judgment captured in the work belong in the
-client's organization. When a process no longer needs us, we move to the next
-priority.
+We bring improvements without being asked: CI/CD fixes, AI skills, automation
+that removes routine work. The runbooks, workflows, and tools we build stay in
+your organization. We never keep a process complicated so you keep needing us.
+When a process runs without us, we move to the next priority.
 
-## Keep experience close to the work
+## The people you meet do the work
 
-AI lets a senior engineer cover ground that once required a coordinated layer of
-specialists and managers. We use that leverage to keep expertise at the keyboard
-and in the room, not to create more distance between a client and the work.
+AI lets one senior engineer cover ground that once took a layer of specialists
+and managers. We spend that leverage keeping the senior people you meet at the
+keyboard and in your meetings.
 
-## Make waiting visible
+## Spotlight the snags
 
-Not deciding is also a decision. A wrong call fails where everyone can see it; a
-delay costs time and momentum that nobody books. We name what a wait is costing,
-treat each request for more certainty as work someone has to do, and ship in
-small steps so the next decision has evidence behind it.
+Not deciding is also a decision. A wrong call shows up and gets fixed; a delay
+costs time and momentum that nobody books. We call out what is blocking the work
+and what each wait costs, treat each request for more certainty as work someone
+has to do, and ship in small steps so the next decision has evidence behind it.
 
-## Prefer clarity to comfort
+## Say the hard thing early
 
-Trust depends on accurate constraints. We name scope, risk, and tradeoffs early,
-even when the answer is inconvenient. A clear no protects the value of a later
-yes.
+We name scope, risk, and tradeoffs as soon as we see them, including when the
+answer is no.
 
-## Practice restraint
+## Complexity earns its place
 
-We stay small, keep meetings scarce, and make artifacts do the work. The same
-restraint shapes the site, proposals, and operating model. Complexity must earn
-its cost.
+We stay small, keep meetings few, and let written artifacts carry the work. The
+site, proposals, and operating model follow the same rule: add complexity only
+when it pays for itself.
 
-## Measure what the team can do next
+## Leave new capability behind
 
-The strongest result is a capability the client can use: pages load faster, a
-new site launches without losing traffic, orders move between systems, or the
-team releases updates without outside coordination.
+We measure an engagement by what you can do after it: pages load faster, a new
+site launches without losing traffic, orders move between systems, or your team
+releases updates without outside coordination.
 
 [Read how the team works](CULTURE.md).
