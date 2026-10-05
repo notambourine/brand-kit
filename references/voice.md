@@ -30,8 +30,10 @@ the software, data, or infrastructure needed to reach that goal. Plan each
 project around the business result it should produce. Keep the time between a
 decision and working software short.
 
-Work inside the client's process: their repos, rituals, approvals, and way of
-buying. Push back when work stalls quietly. Name what a wait is costing and
+Take the client's direction as the brief and own the work against it, from
+inside their repos, rituals, approvals, and way of buying. Improving that
+process is part of the engagement, so present it as partnership, never as
+staffing. Push back when work stalls quietly. Name what a wait is costing and
 treat each request for more certainty as work someone has to do.
 
 Treat AI as a working capability. Explain where it speeds up delivery, automates
