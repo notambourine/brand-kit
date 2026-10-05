@@ -1,6 +1,5 @@
 # Visual rules
 
-Keep confident type, one decisive pink, and enough air to make the work clear.
 Read exact values and component behavior from the CSS.
 
 - Default to dark. Use light surfaces deliberately and rarely, such as print,
@@ -43,6 +42,5 @@ always inline the wordmark subset when using live wordmark text. Otherwise use
 the fallback stacks from `vars.css` knowingly. Email clients and artifact hosts
 may reject font loading even when a page works locally.
 
-Inlining CSS breaks its relative font paths; README covers the integration. A
-self-only CSP requires assets served from the consumer's origin or embedded as
+A self-only CSP requires assets served from the consumer's origin or embedded as
 data, not a CDN.

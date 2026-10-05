@@ -7,8 +7,7 @@ description:
 
 # NoTambourine brand
 
-Apply the brand without padding. Keep the design restrained and the work
-concrete.
+Apply the brand without padding.
 
 ## Read only what the task needs
 
