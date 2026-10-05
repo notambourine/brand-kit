@@ -28,10 +28,10 @@ keyboard and in your meetings.
 
 ## Spotlight the snags
 
-Not deciding is also a decision. A wrong call shows up and gets fixed; a delay
-costs time and momentum that nobody books. We call out what is blocking the work
-and what each wait costs, treat each request for more certainty as work someone
-has to do, and ship in small steps so the next decision has evidence behind it.
+A wrong call shows up and gets fixed. A delay costs time and momentum that
+nobody books. We call out what is blocking the work and what each wait costs,
+treat each request for more certainty as work someone has to do, and ship in
+small steps so the next decision has evidence behind it.
 
 ## Say the hard thing early
 

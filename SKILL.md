@@ -37,7 +37,8 @@ consumer integration requires it; consult README for framework exceptions. Never
 hardcode colors outside renderer `var()` fallbacks.
 
 Read fuller doctrine only when needed: `doctrine/FIRM.md` covers positioning and
-citation rules, `doctrine/SOUL.md` beliefs, and `doctrine/CULTURE.md` working
-practices. notambourine.com serves them publicly. Do not infer internal policy
-from omissions in the public cuts. Keep client material unpublished; `/reports/`
-and `/pog/` are disallowed to agents.
+citation rules, `doctrine/SOUL.md` client-facing beliefs, and
+`doctrine/CULTURE.md` the team's internal working rules. notambourine.com
+publishes edited versions; do not infer internal policy from what they omit.
+Keep client material unpublished; `/reports/` and `/pog/` are disallowed to
+agents.

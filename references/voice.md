@@ -30,13 +30,13 @@ the software, data, or infrastructure needed to reach that goal. Plan each
 project around the business result it should produce. Keep the time between a
 decision and working software short.
 
-Present working inside the client's process, and improving it, as partnership,
-never as staffing. The stance behind it, including how we treat waiting, is in
-`doctrine/SOUL.md`.
+Describe working inside the client's process, and improving it, as partnership,
+never as staffing. `doctrine/SOUL.md` holds the stance behind it, including how
+we call out blockers and waits.
 
 Treat AI as a working capability. Explain where it speeds up delivery, automates
-work, improves a product, or helps a team use its information. Name the result,
-not the novelty. Do not make broad claims about transformation or intelligence.
+work, improves a product, or helps a team use its information. Do not make broad
+claims about transformation or intelligence.
 
 Show engineers working with product managers, operators, designers, and domain
 experts. Credit clear priorities, sound decisions, and close coordination for
@@ -117,9 +117,9 @@ a name, role, and company: `Tom Fuertes · Principal · NoTambourine`.
 Audit anything clients or strangers see: pages, email, decks, proposals, SOWs,
 READMEs, and release notes. Search for candidates, then judge them in context.
 
-The opening should name the work and our responsibility. Remove assumed pain,
-unearned urgency, decorative language, and claims that could describe any
-agency. Keep technical constraints when they explain a decision or result.
+Open by naming the work and our responsibility. Remove assumed pain, unearned
+urgency, decorative language, and claims that could describe any agency. Keep
+technical constraints when they explain a decision or result.
 
 ```sh
 rg -n 'notambourine|Notambourine|[Nn]o\s+[Tt]ambourine|NoTambourine LLC' <file>
