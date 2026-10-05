@@ -24,7 +24,6 @@ where each one lives.
 
 - `Tom Fuertes · Principal · NoTambourine`: 20 years of organizational-change
   experience across more than 250 engagements.
-- The [velocity board](https://notambourine.com/velocity) shows the pace.
 - Private-equity experience: mention only when relevant.
 - Never publish a client list, case studies, rates, margins, fixed offers, deal
   terms, or scope guarantees. References and terms come through a conversation.
