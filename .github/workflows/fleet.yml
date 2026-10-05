@@ -1,0 +1,25 @@
+name: notambourine
+
+# Keep this name and the job ID stable: the required check uses both.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  fleet-actions:
+    permissions:
+      contents: read
+    uses: notambourine/fleet-actions/.github/workflows/fleet-ci.yml@e182477307d59169a66549fc554b0f84a36ce4f6 # v1.9.2
+    with:
+      dash-force-zero: true
+      dash-exclude-defaults: false
+      # npm repo; corepack pins nothing here.
+      pnpm-pin: false
