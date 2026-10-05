@@ -1,145 +1,54 @@
 # Voice and copy audit
 
-Open public pages and introductions with the category line:
+Write from `doctrine/SOUL.md` (what we believe) and `doctrine/CULTURE.md` (how
+we work). Run `/nt-voice:human-voice` on anything clients or strangers see.
 
-> NoTambourine · a boutique AI-native engineering agency
+## Golden set
 
-Drop the name where the wordmark already shows it, and set the rest as an
-eyebrow: `Boutique AI-native engineering agency`.
+Pick and combine these lines; write new copy in their register. The site owns
+where each one lives.
 
-Follow it with the tagline. Use the tagline alone for page titles, sign-offs,
-slides, and footers:
+- `NoTambourine · a boutique AI-native engineering agency`, or under the
+  wordmark the eyebrow `Boutique AI-native engineering agency`
+- `Engineering you can see in the numbers.`
+- `Improve the systems that run your business.`
+- `Senior engineers inside your team to lead delivery.`
+- `Platform migrations, redesigns, site speed, and ongoing engineering.`
+- `Launch a product, automate routine work, or connect systems and data.`
+- `We plan each project around the business result it should produce.`
+- `After our most recent redesign launched, traffic rose 20% and conversion rate rose 20% on top of it.`
+- `Start a conversation`, linked to https://notambourine.com/tom
+- The headings in `doctrine/SOUL.md`
 
-> Engineering you can see in the numbers.
+## Facts
 
-Then say who joins and what they will ship, and keep a client result beside it.
-The category line is the only place AI leads; elsewhere, name what AI changes.
+- `Tom Fuertes · Principal · NoTambourine`: 20 years of organizational-change
+  experience across more than 250 engagements.
+- Private-equity experience: mention only when relevant.
+- Never publish a client list, case studies, rates, margins, fixed offers, deal
+  terms, or scope guarantees. References and terms come through a conversation.
 
-For existing systems, use:
+## Rules
 
-> Improve the systems that run your business.
+- Site copy says "you". A client deliverable's "we" is the client's organization
+  with us inside it. A proposal or SOW names the parties. Never write "I".
+- Back claims with client numbers, shared with permission. For an unnamed
+  client, state the metric, the comparison, and the measurement window.
+- Say "platform", not a vendor, unless the reader runs on it.
+- Describe constraints without blaming whoever built the system.
+- Sentence case; uppercase only for pink eyebrows and deck sublabels. ASCII
+  punctuation; the interpunct separates name, role, and company.
 
-Follow with what we will deliver and what the client can do once it ships. Write
-plainly and warmly. Use humor only when it makes the point clearer.
+## Names
 
-## Positioning and offers
-
-Position NoTambourine as senior engineers who join the client's team, use AI
-throughout delivery, and own the work from business goal to shipped system. Name
-the software, data, or infrastructure needed to reach that goal. Plan each
-project around the business result it should produce. Keep the time between a
-decision and working software short.
-
-Present working inside the client's process, and improving it, as partnership,
-never as staffing. The stance behind it, including how we treat waiting, is in
-`doctrine/SOUL.md`.
-
-Treat AI as a working capability. Explain where it speeds up delivery, automates
-work, improves a product, or helps a team use its information. Name the result,
-not the novelty. Do not make broad claims about transformation or intelligence.
-
-Show engineers working with product managers, operators, designers, and domain
-experts. Credit clear priorities, sound decisions, and close coordination for
-delivery speed. Never claim that eliminating a role, planning, documentation, or
-meetings makes a team fast.
-
-Define fit by the result and the responsibility we will take. Mention
-private-equity experience when relevant, but keep general positioning open to
-any ownership structure. The name means no padding.
-
-Use this introduction:
-
-> NoTambourine puts senior engineers inside your team to lead delivery. We take
-> on platform migrations, redesigns, site speed work, and ongoing engineering.
-> We plan each project around the business result it should produce.
-
-Follow it with the most recent result the client has approved:
-
-> After our most recent redesign launched, traffic rose 20% and conversion rate
-> rose 20% on top of it.
-
-For a meta description or short directory listing, use:
-
-> Senior engineers who join your team and lead delivery. We handle platform
-> migrations, redesigns, site speed, and ongoing engineering.
-
-Say "platform", not a vendor name, in general positioning. Name the vendor only
-in that vendor's directory or when the reader runs on it.
-
-Beyond the four services in the introduction, add launching a product,
-automating routine work, or connecting systems and data when the reader's goal
-calls for it. Describe the shipped change in daily terms, as the last section of
-`doctrine/SOUL.md` does. Support claims about growth, time saved, reliability,
-or delivery speed with client evidence.
-
-Keep public positioning open to a new ambition or an existing constraint. Ask
-what the client wants to accomplish, why now, and what will change after it
-ships. In proposals, connect each constraint to its business consequence and the
-work required.
-
-Shape the engagement around how the client already buys and works. Do not
-publish fixed offers, deal terms, or scope guarantees.
-
-Use "Start a conversation" for the primary invitation. Ask what the reader wants
-to ship and when. Discuss fit before shaping an engagement.
-
-## Register and evidence
-
-- Choose "you", "we", or named parties by artifact, per `doctrine/CULTURE.md`.
-- Keep sales material out of client deliverables. Explain the client's system,
-  the decisions to make, and the work to ship.
-- Show the objective, what shipped, and what the client can now do. Use client
-  numbers when available. Otherwise use a verifiable before and after. Share
-  client evidence only with permission. For an unnamed client, state the metric,
-  the comparison, and how long it was measured.
-- Name who joins and owns delivery.
-- Describe constraints without blaming the people who built the system.
-
-## Names and mechanics
-
-Follow the wordmark rules in `doctrine/FIRM.md`, and cite them for disputed
-naming flags.
-
-Use sentence case for headlines, buttons, navigation, and labels. Reserve
-uppercase for pink eyebrows; decks also use it for sublabels. Follow deck
-guidance for lowercase display headlines. Vary sentence length. Cut
-throat-clearing, superlatives, exclamation marks, and clever phrasing that
-delays the point.
-
-Use ASCII punctuation: hyphens and straight quotes/apostrophes. Do not use em/en
-dashes, curly quotes, or single-character ellipses. The interpunct may separate
-a name, role, and company: `Tom Fuertes · Principal · NoTambourine`.
-
-## Audit before shipping
-
-Audit anything clients or strangers see: pages, email, decks, proposals, SOWs,
-READMEs, and release notes. Search for candidates, then judge them in context.
-
-The opening should name the work and our responsibility. Remove assumed pain,
-unearned urgency, decorative language, and claims that could describe any
-agency. Keep technical constraints when they explain a decision or result.
+- `NoTambourine` in every human-facing sentence.
+- `notambourine` only in a path, URL, domain, GitHub org, npm name, or CSS
+  class.
+- `NoTambourine LLC` at most twice per contract: the signature block and one
+  Definitions anchor.
+- Never `Notambourine`, `No Tambourine`, any split form, or wordplay on the
+  instrument.
 
 ```sh
 rg -n 'notambourine|Notambourine|[Nn]o\s+[Tt]ambourine|NoTambourine LLC' <file>
-rg -n '[\x{2014}\x{2013}\x{2018}\x{2019}\x{201C}\x{201D}\x{2026}]' <file>
-rg -ni '\b(proven|world-class|battle-tested|results-driven|cutting-edge|best-in-class|seamless|robust|leverage|synergy|holistic|bespoke)\b' <file>
-rg -ni ',\s+(ensuring|enabling|allowing|helping|driving|empowering|delivering|providing)\b' <file>
-rg -ni "this matters|it's worth noting|it is worth noting|needless to say|at the end of the day|in today's" <file>
-rg -n '!(\s|$)|\bI\b' <file>
 ```
-
-Check legal-name occurrences against the contract limit. Ignore technical slugs
-and code when judging wordmark hits. Ignore literal technical uses such as "a
-robust error path" and `I` in quotations, identifiers, or names.
-
-Cut puffery and keep evidence. Replace claims of importance with the
-consequence. Cut participle tails at the comma. Narrow grand claims to something
-a client can verify. If a sentence keeps its meaning after a phrase is cut, cut
-the phrase.
-
-Keep two fixtures even when they match a search flag: factual lines such as "Two
-engineers, six weeks, one shipped feature", and one pink `<em>` in a headline.
-
-Format source documents with the repository's pinned Prettier before sharing or
-exporting them. Review the rendered document, especially slide breaks and
-tables.
