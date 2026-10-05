@@ -36,9 +36,8 @@ Use semantic CSS aliases. Reach for primitives only when no alias fits or the
 consumer integration requires it; consult README for framework exceptions. Never
 hardcode colors outside renderer `var()` fallbacks.
 
-Read fuller doctrine only when needed: `doctrine/FIRM.md` covers positioning and
-citation rules, `doctrine/SOUL.md` client-facing beliefs, and
-`doctrine/CULTURE.md` the team's internal working rules. notambourine.com
+Read doctrine only when needed: `doctrine/SOUL.md` holds client-facing beliefs
+and `doctrine/CULTURE.md` the team's internal working rules. notambourine.com
 publishes edited versions; do not infer internal policy from what they omit.
 Keep client material unpublished; `/reports/` and `/pog/` are disallowed to
 agents.
