@@ -5,11 +5,17 @@ on:
   push:
     branches: [main]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 permissions:
   contents: read
 
 jobs:
   prettier:
+    permissions:
+      contents: read
     runs-on: ubuntu-slim
     timeout-minutes: 5
     steps:

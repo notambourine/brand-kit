@@ -13,8 +13,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write # writes the v* tag after publishing
-  id-token: write
+  contents: read
 
 concurrency:
   group: publish
@@ -22,6 +21,9 @@ concurrency:
 
 jobs:
   publish:
+    permissions:
+      contents: write # writes the v* tag after publishing
+      id-token: write
     # Deliberately NOT ubuntu-slim: this job runs a few times a month, so the 3x tier
     # saving is pennies a year, and it is the release path - a slim-only surprise would
     # surface at publish time with a half-shipped version.
