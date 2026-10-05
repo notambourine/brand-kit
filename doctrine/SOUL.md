@@ -51,4 +51,4 @@ The strongest result is a capability the client can use: pages load faster, a
 new site launches without losing traffic, orders move between systems, or the
 team releases updates without outside coordination.
 
-[Read how the team works](https://notambourine.com/CULTURE.md).
+[Read how the team works](CULTURE.md).

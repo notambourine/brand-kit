@@ -38,7 +38,6 @@ hardcode colors outside renderer `var()` fallbacks.
 
 Read fuller doctrine only when needed: `doctrine/FIRM.md` covers positioning and
 citation rules, `doctrine/SOUL.md` beliefs, and `doctrine/CULTURE.md` working
-practices. notambourine.com serves them publicly. Use the voice reference for
-current messaging. Do not infer internal policy from omissions in the public
-cuts. Keep client material unpublished; `/reports/` and `/pog/` are disallowed
-to agents.
+practices. notambourine.com serves them publicly. Do not infer internal policy
+from omissions in the public cuts. Keep client material unpublished; `/reports/`
+and `/pog/` are disallowed to agents.

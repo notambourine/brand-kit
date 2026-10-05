@@ -30,11 +30,9 @@ the software, data, or infrastructure needed to reach that goal. Plan each
 project around the business result it should produce. Keep the time between a
 decision and working software short.
 
-Take the client's direction as the brief and own the work against it, from
-inside their repos, rituals, approvals, and way of buying. Improving that
-process is part of the engagement, so present it as partnership, never as
-staffing. Push back when work stalls quietly. Name what a wait is costing and
-treat each request for more certainty as work someone has to do.
+Present working inside the client's process, and improving it, as partnership,
+never as staffing. The stance behind it, including how we treat waiting, is in
+`doctrine/SOUL.md`.
 
 Treat AI as a working capability. Explain where it speeds up delivery, automates
 work, improves a product, or helps a team use its information. Name the result,
@@ -68,13 +66,11 @@ For a meta description or short directory listing, use:
 Say "platform", not a vendor name, in general positioning. Name the vendor only
 in that vendor's directory or when the reader runs on it.
 
-Give clear reasons to call: a platform migration, a redesign, site speed, or
-ongoing engineering. Add launching a product, automating routine work, or
-connecting systems and data when the reader's goal calls for it. Describe the
-shipped change in daily terms. Pages load faster. The new site launches without
-losing traffic. An order moves between systems. A team releases an update.
-Support claims about growth, time saved, reliability, or delivery speed with
-client evidence.
+Beyond the four services in the introduction, add launching a product,
+automating routine work, or connecting systems and data when the reader's goal
+calls for it. Describe the shipped change in daily terms, as the last section of
+`doctrine/SOUL.md` does. Support claims about growth, time saved, reliability,
+or delivery speed with client evidence.
 
 Keep public positioning open to a new ambition or an existing constraint. Ask
 what the client wants to accomplish, why now, and what will change after it
@@ -89,9 +85,7 @@ to ship and when. Discuss fit before shaping an engagement.
 
 ## Register and evidence
 
-- Address marketing readers as "you". In client deliverables, use "we" for the
-  client's organization with us inside it. Name the parties in proposals and
-  SOWs. Never use "I" as the author's voice.
+- Choose "you", "we", or named parties by artifact, per `doctrine/CULTURE.md`.
 - Keep sales material out of client deliverables. Explain the client's system,
   the decisions to make, and the work to ship.
 - Show the objective, what shipped, and what the client can now do. Use client
@@ -103,13 +97,8 @@ to ship and when. Discuss fit before shaping an engagement.
 
 ## Names and mechanics
 
-Use `NoTambourine` in human-facing sentences. Reserve `notambourine` for
-technical slugs, paths, URLs, domains, GitHub organizations, npm names, and CSS
-classes. Use `NoTambourine LLC` only in contracts, at most twice: one
-Definitions anchor and the signature block. Reject `Notambourine` and
-`No Tambourine`. Cite the public `AGENTS.md` for disputed naming flags.
-
-Never space or split the name, including in wordplay on the instrument.
+Follow the wordmark rules in `doctrine/FIRM.md`, and cite them for disputed
+naming flags.
 
 Use sentence case for headlines, buttons, navigation, and labels. Reserve
 uppercase for pink eyebrows; decks also use it for sublabels. Follow deck

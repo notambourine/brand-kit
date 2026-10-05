@@ -11,7 +11,7 @@ Correct a brand value here. Every other copy is downstream.
 | `tokens.css`     | The whole system: the faces, every value, and styled bare HTML.         |
 | `vars.css`       | The values alone, for a surface with its own faces and base layer.      |
 | `components.css` | `.nt-btn`, `.nt-card`, `.nt-nav`, and the rest, all `var()`-based.      |
-| `deck.css`       | The Marpit slide theme, 1280x720. Load `vars.css` on the page too.      |
+| `deck.css`       | The Marpit slide theme, 1280x720. Load `tokens.css` on the page too.    |
 | `prose.css`      | `.nt-prose` for rendered markdown, on screen and on paper.              |
 | `logo/`          | The mark, the lockup, the icons, and the rasters cut from them.         |
 | `doctrine/`      | The firm, its beliefs, and its culture, as the public site serves them. |
@@ -139,10 +139,8 @@ into a layer StyleX orders itself against:
 @import "@notambourine/brand-kit/tokens.css" layer(base);
 ```
 
-The package ships the stylesheets, `fonts/`, `logo/`, and `SKILL.md`. The logo
-build script and `hello-world.html` stay in the repo. Pin an exact version and
-bump it on purpose; a caret range moves the brand under a consumer with no diff
-to review.
+Pin an exact version and bump it on purpose; a caret range moves the brand under
+a consumer with no diff to review.
 
 Consumers today:
 
@@ -159,12 +157,6 @@ fallback and the page still renders, so a bump can go wrong quietly. Check three
 things in the consumer's CI: the font bytes hash against `fonts/`, every color
 is one this kit defines, and every `var()` reads a property it still declares.
 `notambourine/share`'s `npm run brand` is the reference implementation.
-
-## Format documents
-
-Install dependencies with `npm ci`. Run `npm run format` before sharing
-documents or exporting them. Markdown and MDX are included, along with HTML and
-JSON/YAML. Review rendered output after formatting.
 
 ## Release
 

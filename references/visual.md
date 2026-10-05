@@ -43,11 +43,6 @@ always inline the wordmark subset when using live wordmark text. Otherwise use
 the fallback stacks from `vars.css` knowingly. Email clients and artifact hosts
 may reject font loading even when a page works locally.
 
-Inlining CSS moves relative font resolution to the HTML location. Preserve that
-relationship or embed the faces; copying styles alone is insufficient. Use
-README for normal package integration.
-
-A self-only CSP requires assets served from the consumer's origin or permitted
-embedded data, not a CDN. For a deck theme with no slide element to attach
-artwork to, use the supplied logo data URI variables. A PDF or offline snapshot
-cannot rely on an origin to retrieve artwork.
+Inlining CSS breaks its relative font paths; README covers the integration. A
+self-only CSP requires assets served from the consumer's origin or embedded as
+data, not a CDN.
