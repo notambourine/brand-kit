@@ -17,8 +17,10 @@ jobs:
   fleet-actions:
     permissions:
       contents: read
-    uses: notambourine/fleet-actions/.github/workflows/fleet-ci.yml@e182477307d59169a66549fc554b0f84a36ce4f6 # v1.9.2
+    uses: notambourine/fleet-actions/.github/workflows/fleet-ci.yml@be38cfcf9f9a3447ea3915d0231d027ef1992658 # v1.10.0
     with:
+      runs-on: blacksmith-2vcpu-ubuntu-2404
+      actionlint-extra-labels: blacksmith-2vcpu-ubuntu-2404
       dash-force-zero: true
       dash-exclude-defaults: false
       # npm repo; corepack pins nothing here.
