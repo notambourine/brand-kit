@@ -15,8 +15,7 @@ concrete.
 - For visual design or styling, read [visual rules](references/visual.md),
   including locked-surface font and logo traps.
 - For writing or auditing anything clients or the public see, read
-  [voice and copy audit](references/voice.md). Lead with its core framing and
-  use its supporting headline for existing systems.
+  [voice and copy audit](references/voice.md) and build from its golden set.
 - For slide authoring or export, read [deck guidance](references/decks.md). Load
   visual or voice guidance only when designing slides or writing/reviewing their
   copy.
