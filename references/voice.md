@@ -1,20 +1,20 @@
 # Voice and copy audit
 
-## Copy
+## Golden set
 
-- Category line: `NoTambourine · a boutique AI-native engineering agency`. Under
-  the wordmark, set only the eyebrow: `Boutique AI-native engineering agency`.
-- Tagline: `Engineering you can see in the numbers.` Use it alone for page
-  titles, sign-offs, slides, and footers.
-- Existing systems: `Improve the systems that run your business.`
-- Introduction:
-  `NoTambourine puts senior engineers inside your team to lead delivery. We take on platform migrations, redesigns, site speed work, and ongoing engineering. We plan each project around the business result it should produce.`
-- Result:
-  `After our most recent redesign launched, traffic rose 20% and conversion rate rose 20% on top of it.`
-- Meta description:
-  `Senior engineers who join your team and lead delivery. We handle platform migrations, redesigns, site speed, and ongoing engineering.`
-- Invitation: "Start a conversation", linked to https://notambourine.com/tom.
-  Ask what the reader wants to ship and when.
+Pick and combine these lines; write new copy in their register. The site owns
+where each one lives.
+
+- `NoTambourine · a boutique AI-native engineering agency`, or under the
+  wordmark the eyebrow `Boutique AI-native engineering agency`
+- `Engineering you can see in the numbers.`
+- `Improve the systems that run your business.`
+- `Senior engineers inside your team to lead delivery.`
+- `Platform migrations, redesigns, site speed, and ongoing engineering.`
+- `We plan each project around the business result it should produce.`
+- `After our most recent redesign launched, traffic rose 20% and conversion rate rose 20% on top of it.`
+- `Start a conversation`, linked to https://notambourine.com/tom
+- The headings in `doctrine/SOUL.md`
 
 ## Facts
 
