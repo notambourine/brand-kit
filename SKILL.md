@@ -36,9 +36,9 @@ Use semantic CSS aliases. Reach for primitives only when no alias fits or the
 consumer integration requires it; consult README for framework exceptions. Never
 hardcode colors outside renderer `var()` fallbacks.
 
-Fetch fuller doctrine only when needed: `http://notambourine.com/llms.txt`
-indexes the public documents; `AGENTS.md` covers positioning and citation rules,
-`SOUL.md` beliefs, and `CULTURE.md` working practices. Use the local voice
-reference for current messaging. Do not infer internal policy from omissions in
-the public cuts. Keep client material unpublished; `/reports/` and `/pog/` are
-disallowed to agents.
+Read fuller doctrine only when needed: `doctrine/FIRM.md` covers positioning and
+citation rules, `doctrine/SOUL.md` beliefs, and `doctrine/CULTURE.md` working
+practices. notambourine.com serves them publicly. Use the voice reference for
+current messaging. Do not infer internal policy from omissions in the public
+cuts. Keep client material unpublished; `/reports/` and `/pog/` are disallowed
+to agents.
