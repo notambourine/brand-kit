@@ -2,3 +2,6 @@
 logo/
 fonts/
 logo-vars.css
+storybook-static/
+vars.css
+tailwind.css

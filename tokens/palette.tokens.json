@@ -1,0 +1,78 @@
+{
+  "brand": {
+    "$description": "Brand palette. Write against the semantic aliases, not these: an alias survives a theme swap and a primitive does not.",
+    "$type": "color",
+    "nt-pink": {
+      "$value": "#E75A7C",
+      "$description": "Accent Primary: CTAs, highlights, logo"
+    },
+    "nt-pink-press": { "$value": "#C9446A" },
+    "nt-pink-soft": { "$value": "#FBE3EA" },
+    "nt-pink-tint": { "$value": "#FEF3F6" },
+    "nt-pink-deep": {
+      "$value": "#A83758",
+      "$description": "text-grade pink: 5:1 on paper and the pink tints"
+    },
+    "nt-mint": {
+      "$value": "#58C9B9",
+      "$description": "Complementary: borders, subtle icons"
+    },
+    "nt-mint-press": { "$value": "#3FA897" },
+    "nt-mint-soft": { "$value": "#DCF3EF" },
+    "nt-mint-tint": { "$value": "#ECF9F6" },
+    "nt-mint-deep": {
+      "$value": "#1B6F62",
+      "$description": "text-grade mint: 5:1 on paper and the mint tints"
+    },
+    "nt-ink": {
+      "$value": "#000000",
+      "$description": "Neutral Primary: headlines, rules"
+    },
+    "nt-ink-85": { "$value": "#1A1A1A" },
+    "nt-ink-70": { "$value": "#404040" }
+  },
+  "light-neutrals": {
+    "$description": "The light neutrals lean one step toward the pink, so light surfaces come from the same hand as the dark ramp, which leans cool.",
+    "$type": "color",
+    "nt-mid": {
+      "$value": "#776C72",
+      "$description": "Neutral Mid-tone: secondary text"
+    },
+    "nt-mid-soft": { "$value": "#B3AAAF" },
+    "nt-line": { "$value": "#E9E3E6", "$description": "subtle hairlines" },
+    "nt-line-soft": { "$value": "#F3EEF1" },
+    "nt-paper": {
+      "$value": "#FAF8F9",
+      "$description": "Background Light: main bg",
+      "$extensions": { "com.notambourine.tailwind": "color-paper" }
+    },
+    "nt-paper-warm": { "$value": "#FDFCFA" },
+    "nt-white": { "$value": "#FFFFFF" }
+  },
+  "dark-surfaces": {
+    "$description": "The system is dark-first. These are the surfaces UI sits on.",
+    "$type": "color",
+    "nt-bg": {
+      "$value": "#0B0B0C",
+      "$description": "page canvas: just-off-black"
+    },
+    "nt-surface-1": { "$value": "#141416", "$description": "default card" },
+    "nt-surface-2": {
+      "$value": "#1C1C1F",
+      "$description": "raised card, popovers"
+    },
+    "nt-surface-3": {
+      "$value": "#26262A",
+      "$description": "hover, input fill"
+    },
+    "nt-border": { "$value": "#2A2A2E", "$description": "hairline on dark" },
+    "nt-border-soft": { "$value": "#1F1F22" },
+    "nt-fg1-dark": { "$value": "#F5F5F7", "$description": "headlines" },
+    "nt-fg2-dark": { "$value": "#C9C9CE", "$description": "body" },
+    "nt-fg3-dark": {
+      "$value": "#8A8A92",
+      "$description": "secondary, captions"
+    },
+    "nt-fg-mute": { "$value": "#5A5A62", "$description": "disabled" }
+  }
+}
