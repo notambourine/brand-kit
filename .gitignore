@@ -1,1 +1,5 @@
 node_modules/
+storybook-static/
+# Generated from tokens/ by scripts/build-tokens.mjs
+vars.css
+tailwind.css

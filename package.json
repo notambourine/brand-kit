@@ -1,6 +1,6 @@
 {
   "name": "@notambourine/brand-kit",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "NoTambourine brand assets and guidance for design, decks, and copy",
   "license": "MIT",
   "repository": {
@@ -19,15 +19,20 @@
   "author": "NoTambourine LLC",
   "type": "module",
   "scripts": {
+    "build:tokens": "node scripts/build-tokens.mjs",
+    "storybook": "npm run build:tokens && storybook dev -p 6006",
+    "build-storybook": "npm run build:tokens && storybook build",
     "format": "prettier --write \"**/*.{md,mdx,html,json,yml,yaml}\"",
     "format:check": "prettier --check \"**/*.{md,mdx,html,json,yml,yaml}\"",
-    "prepack": "npm run format:check"
+    "prepack": "npm run build:tokens && npm run format:check"
   },
   "//": "No exports map: consumers import stylesheets and logo files by path, and their vendor scripts walk fonts/ and logo/ whole. A map would restate the tree and go stale the first time a file is added.",
   "files": [
     "*.css",
     "fonts",
     "logo",
+    "examples",
+    "tokens",
     "SKILL.md",
     "references",
     "doctrine"
@@ -39,6 +44,12 @@
     "*.css"
   ],
   "devDependencies": {
-    "prettier": "3.9.6"
+    "@storybook/addon-a11y": "10.6.1",
+    "@storybook/addon-docs": "10.6.1",
+    "@storybook/html-vite": "10.6.1",
+    "prettier": "3.9.6",
+    "storybook": "10.6.1",
+    "style-dictionary": "5.6.0",
+    "vite": "8.3.2"
   }
 }

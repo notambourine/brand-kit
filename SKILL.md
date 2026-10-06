@@ -20,6 +20,8 @@ Apply the brand without padding.
   copy.
 - For a color, type, spacing, or component value, inspect the relevant CSS
   directly. Do not load prose references for a value lookup.
+- For page or component markup, start from the matching file in `examples/` and
+  keep its classes.
 - For installation, asset selection, logo regeneration, or consumer integration,
   read the relevant section of [README.md](README.md).
 

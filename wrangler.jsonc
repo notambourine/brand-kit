@@ -1,0 +1,9 @@
+// Serves the built Storybook. Workers Builds runs `npm run build-storybook`, then
+// `npx wrangler deploy` on main and `npx wrangler preview` on other branches.
+{
+  "name": "brand-kit",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./storybook-static" },
+  "preview_urls": true,
+  "previews": {}
+}
