@@ -22,3 +22,24 @@ updates:
         patterns:
           - "*"
     # majors match no group -> individual PRs
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: cron
+      cronjob: "0 9 * * 1-5"
+      timezone: America/Chicago
+    cooldown:
+      default-days: 2
+    groups:
+      npm:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch
+      security:
+        applies-to: security-updates
+        patterns:
+          - "*"
