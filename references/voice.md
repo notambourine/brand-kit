@@ -25,8 +25,10 @@ where each one lives.
 - `Tom Fuertes · Principal · NoTambourine`: 20 years of organizational-change
   experience across more than 250 engagements.
 - Private-equity experience: mention only when relevant.
-- Never publish a client list, case studies, rates, margins, fixed offers, deal
-  terms, or scope guarantees. References and terms come through a conversation.
+- Never publish a client list, a named case study, rates, margins, fixed offers,
+  deal terms, or scope guarantees. References and terms come through a
+  conversation.
+- Draw proof from the white-labelled [case studies](case-studies/README.md).
 
 ## Rules
 
