@@ -3,6 +3,13 @@ import semantic from "../tokens/semantic.tokens.json";
 
 export default { title: "Tokens", tags: ["!autodocs"] };
 
+const label = ({ $value: v }) =>
+  typeof v === "string"
+    ? v.replace(/^\{[^.]+\.(.+)\}$/, "var(--$1)")
+    : v.alpha === undefined
+      ? v.hex
+      : `${v.hex} / ${v.alpha}`;
+
 const entries = (group) =>
   Object.entries(group).filter(([key]) => !key.startsWith("$"));
 
@@ -21,7 +28,7 @@ const swatches = (groups) =>
               ]) => `<div class="nt-card" style="padding: var(--sp-3)">
                 <div style="height: 48px; border-radius: var(--r-sm); border: 1px solid var(--line); background: var(--${name})"></div>
                 <p style="margin-top: var(--sp-2)"><code>--${name}</code></p>
-                <p class="caption">${token.$value.replace(/^\{[^.]+\.(.+)\}$/, "var(--$1)")}</p>
+                <p class="caption">${label(token)}</p>
               </div>`,
             )
             .join("")}
