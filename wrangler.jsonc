@@ -4,5 +4,6 @@
   "name": "brand-kit",
   "compatibility_date": "2026-10-01",
   "assets": { "directory": "./storybook-static" },
+  "preview_urls": true,
   "previews": {}
 }
