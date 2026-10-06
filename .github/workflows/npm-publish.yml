@@ -24,9 +24,8 @@ jobs:
     permissions:
       contents: write # writes the v* tag after publishing
       id-token: write
-    # Deliberately NOT ubuntu-slim: this job runs a few times a month, so the 3x tier
-    # saving is pennies a year, and it is the release path - a slim-only surprise would
-    # surface at publish time with a half-shipped version.
+    # GitHub-hosted, not Blacksmith or slim: npm trusted publishing and provenance reject
+    # self-hosted runners, and a runner surprise here would half-ship a version.
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
