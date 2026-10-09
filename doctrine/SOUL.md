@@ -1,7 +1,7 @@
 # NoTambourine's soul: what we believe
 
 NoTambourine · a boutique AI-native engineering agency. We put senior engineers
-inside your team and plan each project around a business result you can see in
+inside your team and plan each project around a business result you see in
 the numbers.
 
 ## Work inside the client's process
@@ -15,10 +15,11 @@ work to see whether it holds up.
 
 ## Be a catalyst, not a crutch
 
-We bring improvements without being asked: CI/CD fixes, AI skills, automation
-that removes routine work. The runbooks, workflows, and tools we build stay in
-your organization. We never keep a process complicated so you keep needing us.
-When a process runs without us, we move to the next priority.
+We earn continued work with results, not dependency. We bring improvements
+without being asked: CI/CD fixes, AI skills, automation that removes routine
+work. The runbooks, workflows, and tools we build stay in your organization, and
+we never keep a process complicated so you keep needing us. Once your team owns
+a process, we put our time on the next problem worth solving.
 
 ## The people you meet do the work
 
@@ -43,11 +44,5 @@ answer is no.
 We stay small, keep meetings few, and let written artifacts carry the work. The
 site, proposals, and operating model follow the same rule: add complexity only
 when it pays for itself.
-
-## Leave new capability behind
-
-We measure an engagement by what you can do after it: pages load faster, a new
-site launches without losing traffic, orders move between systems, or your team
-releases updates without outside coordination.
 
 [Read how the team works](CULTURE.md).
