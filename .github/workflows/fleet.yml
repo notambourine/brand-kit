@@ -17,7 +17,7 @@ jobs:
   fleet-actions:
     permissions:
       contents: read
-    uses: notambourine/fleet-actions/.github/workflows/fleet-ci.yml@0b96150ba8e1689573848ba12dc9dc573058b43f # v1.10.1
+    uses: notambourine/fleet-actions/.github/workflows/fleet-ci.yml@395ca93d41a57ade33fa1ad846befac455f063ac # v1.10.2
     with:
       runs-on: blacksmith-2vcpu-ubuntu-2404
       actionlint-extra-labels: blacksmith-2vcpu-ubuntu-2404
