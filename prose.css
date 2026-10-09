@@ -73,20 +73,25 @@
 .nt-prose li:has(> input:checked) { color: var(--fg3); }
 
 /* A figure that ends in a hard break (`- **38%**\`) is a stat, not a term, so
-   a definition list that leads with bold stays a list. */
-.nt-prose ul:has(> li > strong:first-child + br) {
+   a definition list that leads with bold stays a list. :has() cannot nest, so
+   the first and last bullets stand in for every bullet. */
+.nt-prose ul:has(> li:first-child > strong:first-child + br):has(> li:last-child > strong:first-child + br) {
   list-style: none;
   padding: 0;
   display: grid;
-  /* Two across, or three for exactly three: never a lone card on its own row. */
+  /* Two across, three for 3, 5, or 6: a row never holds a lone card. */
   --stat-cols: 2;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, max(12em, (100% - 2em) / var(--stat-cols))), 1fr));
   gap: 0.75em;
 }
-.nt-prose ul:has(> li > strong:first-child + br):has(> li:nth-child(3):last-child) { --stat-cols: 3; }
-.nt-prose ul:has(> li > strong:first-child + br) > li {
+.nt-prose ul:has(> li:first-child > strong:first-child + br):has(> li:last-child > strong:first-child + br):has(> li:is(:nth-child(3), :nth-child(5), :nth-child(6)):last-child) {
+  --stat-cols: 3;
+}
+/* A hairline alone vanishes on the dark canvas; the fill is what makes a card. */
+.nt-prose ul:has(> li:first-child > strong:first-child + br):has(> li:last-child > strong:first-child + br) > li {
   margin: 0;
   padding: 0.9em 1em;
+  background: var(--bg-card);
   border: 1px solid var(--line);
   border-radius: var(--r-sm);
   font-size: 0.875em;
@@ -101,7 +106,7 @@
   font-variant-numeric: tabular-nums;
   letter-spacing: var(--ls-tight);
   line-height: 1.1;
-  color: var(--support-fg);
+  color: var(--fg1);
 }
 .nt-prose li > strong:first-child + br { display: none; }
 
@@ -142,9 +147,11 @@
 .nt-prose pre code { font-size: 1em; background: none; color: var(--fg2); padding: 0; }
 
 /* A quote is a pull quote: the voice of someone other than the author. A
-   closing line under it is the attribution. */
+   closing italic line under it is the attribution, so a quote's own last
+   paragraph keeps its size. */
 .nt-prose blockquote {
   padding: 1.1em 1.4em;
+  background: var(--bg-card);
   border: 1px solid var(--line);
   border-radius: var(--r-sm);
   font-family: var(--font-display);
@@ -153,10 +160,10 @@
   color: var(--fg1);
 }
 .nt-prose blockquote > * + * { margin-top: 0.75em; }
-.nt-prose blockquote > p:last-child:not(:first-child) {
+.nt-prose blockquote > p:last-child:not(:first-child):has(> em:only-child) {
   font-family: var(--font-body);
   font-size: 0.75em;
-  color: var(--support-fg);
+  color: var(--fg3);
 }
 
 /* `display: block` lets a wide table scroll itself: the render emits no wrapper
