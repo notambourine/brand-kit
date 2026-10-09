@@ -10,7 +10,8 @@ where each one lives.
 
 - `NoTambourine · a boutique AI-native engineering agency`, or under the
   wordmark the eyebrow `Boutique AI-native engineering agency`
-- `Engineering you can see in the numbers.`
+- `Engineering measured in results, not hours.`
+- `We earn continued work with results, not dependency.`
 - `Improve the systems that run your business.`
 - `Senior engineers inside your team to lead delivery.`
 - `Platform migrations, redesigns, site speed, and ongoing engineering.`
