@@ -1,6 +1,6 @@
 {
   "name": "@notambourine/brand-kit",
-  "version": "3.2.1",
+  "version": "3.3.0",
   "description": "NoTambourine brand assets and guidance for design, decks, and copy",
   "license": "MIT",
   "repository": {
@@ -14,7 +14,8 @@
     "design-tokens",
     "css",
     "marpit",
-    "notambourine"
+    "notambourine",
+    "marp"
   ],
   "author": "NoTambourine LLC",
   "type": "module",
@@ -24,7 +25,8 @@
     "build-storybook": "npm run build:tokens && storybook build",
     "format": "prettier --write \"**/*.{md,mdx,html,json,yml,yaml}\"",
     "format:check": "prettier --check \"**/*.{md,mdx,html,json,yml,yaml}\"",
-    "prepack": "npm run build:tokens && npm run format:check"
+    "prepack": "npm run build:tokens && npm run build:deck && npm run format:check",
+    "build:deck": "node scripts/build-deck.mjs"
   },
   "//": "No exports map: consumers import stylesheets and logo files by path, and their vendor scripts walk fonts/ and logo/ whole. A map would restate the tree and go stale the first time a file is added.",
   "files": [
