@@ -5,7 +5,15 @@
     <title>$pagetitle$ · NoTambourine</title>
     $for(css)$
     <link rel="stylesheet" href="$css$" />
-    $endfor$
+    $endfor$ $if(ref)$
+    <style>
+      @page {
+        @bottom-left {
+          content: "$ref$";
+        }
+      }
+    </style>
+    $endif$
   </head>
   <body>
     <main class="nt-prose">$body$</main>

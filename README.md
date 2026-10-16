@@ -15,7 +15,7 @@ guidance.
 | `deck.css`            | The Marpit slide theme, 960x540. Load `tokens.css` on the page too.                  |
 | `deck-standalone.css` | `deck.css` with faces, tokens, and logo inlined, for marp-cli PDF export.            |
 | `prose.css`           | `.nt-prose` for rendered markdown, on screen and on paper.                           |
-| `print.css`           | `.print-doc`: A4 page box, paper density, and the first-page lockup.                 |
+| `print.css`           | `.print-doc`: Letter page box, paper density, and the first-page lockup.             |
 | `doc-standalone.css`  | `prose.css` and `print.css` with faces, tokens, and logo inlined, for document PDFs. |
 | `doc-template.html`   | The pandoc template that wraps markdown for `doc-standalone.css`.                    |
 | `logo/`               | The mark, the lockup, the icons, and the rasters cut from them.                      |
