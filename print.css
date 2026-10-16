@@ -1,0 +1,45 @@
+/* =========================================================
+   NoTambourine: documents on paper
+   ---------------------------------------------------------
+   Part of the golden set. Put `print-doc theme-light` on
+   <html> and wrap the content in `.nt-prose`. Light, because
+   a PDF gets printed and forwarded; on <html>, because the
+   canvas paints there and a class below it leaves the dark
+   page under the paper.
+   ========================================================= */
+
+/* .nt-prose caps the measure at 40em, about 148mm at 10.5pt; 24mm gutters
+   leave 162mm, so the column sits inside the box. */
+@page {
+  size: A4;
+  margin: 18mm 24mm 20mm;
+  /* The canvas stops at the margins; the page box carries the paper to the edge.
+     The page context may not see the root's tokens, so the fallbacks can print. */
+  background: var(--bg, #faf8f9);
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    font: 7pt var(--font-body, "JetBrains Mono", monospace);
+    color: var(--fg3, #776c72);
+  }
+}
+
+/* Chrome drops backgrounds when printing unless told, and code blocks, stat
+   cards, and quotes are all fills. */
+.print-doc { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.print-doc body { margin: 0; padding: 0; }
+.print-doc .nt-prose { font-size: 10.5pt; line-height: 1.55; }
+
+/* The lockup rides the first page only, so the PDF names its sender when it
+   arrives as an attachment with no link around it. A background off the data
+   URI in logo-vars.css, so no wrapper needs markup for it. */
+.print-doc body::before {
+  content: "";
+  display: block;
+  height: 26pt;
+  margin-bottom: 16pt;
+  padding-bottom: 6pt;
+  border-bottom: 1px solid var(--line);
+  background: var(--nt-lockup-url) left top / auto 26pt no-repeat;
+  background-origin: content-box;
+  box-sizing: content-box;
+}
