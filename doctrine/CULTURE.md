@@ -20,6 +20,9 @@ waiting costs more. Ask for help when a constraint is real, not for permission
 to start. This autonomy works because the hiring bar, scope, and feedback are
 explicit.
 
+Seniors own epics, not tickets. Take an epic as the client framed it, drive it
+with UNODIR and Veto, and hand off only when someone else has to act.
+
 When someone asks for more analysis, review, or testing, state the cost first:
 the days, the people, and the work it delays. Then they decide. Name stalled
 work in the channel where the decision lives.
@@ -28,7 +31,9 @@ work in the channel where the decision lives.
 
 We join the client's process instead of installing our own. Ceremonies and gates
 stay only if they catch a real risk or improve a decision. Talk to a person
-instead of sending a report nobody reads. If the client has no process, our
+instead of sending a report nobody reads. Report status per epic in the
+client's terms: "homepage halfway, no blockers, Thursday," not "merged #1392."
+If the client has no process, our
 seniors carry one. Measure progress in value delivered, not points estimated.
 
 ## Hire for capability, not headcount
