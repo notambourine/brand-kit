@@ -31,10 +31,10 @@ work in the channel where the decision lives.
 
 We join the client's process instead of installing our own. Ceremonies and gates
 stay only if they catch a real risk or improve a decision. Talk to a person
-instead of sending a report nobody reads. Report status per epic in the
-client's terms: "homepage halfway, no blockers, Thursday," not "merged #1392."
-If the client has no process, our
-seniors carry one. Measure progress in value delivered, not points estimated.
+instead of sending a report nobody reads. Report status per epic in the client's
+terms: "homepage halfway, no blockers, Thursday," not "merged #1392." If the
+client has no process, our seniors carry one. Measure progress in value
+delivered, not points estimated.
 
 ## Hire for capability, not headcount
 
