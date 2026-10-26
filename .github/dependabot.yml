@@ -8,7 +8,7 @@ updates:
       time: "09:00"
       timezone: America/Chicago
     cooldown:
-      default-days: 2
+      default-days: 7
     groups:
       actions:
         applies-to: version-updates
@@ -30,7 +30,7 @@ updates:
       time: "09:00"
       timezone: America/Chicago
     cooldown:
-      default-days: 1
+      default-days: 7
     groups:
       npm:
         applies-to: version-updates
