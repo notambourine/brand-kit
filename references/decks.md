@@ -20,15 +20,20 @@ theme:
 
 ```bash
 npx @marp-team/marp-cli@4.5.1 <slug>.md --pdf --html --allow-local-files \
-  --theme-set node_modules/@notambourine/brand-kit/deck-standalone.css
+  --theme-set node_modules/@notambourine/brand-kit/deck-standalone.css \
+  -o "NoTambourine · Client (Topic).pdf"
 ```
 
 - `deck-standalone.css` carries the faces, every token, and the lockup as data
   URIs, so the file renders with nothing beside it. It is built from `deck.css`;
   correct the source, never the build.
-- Name the source by content, never `deck.md`: an exported PDF travels without
-  its folder, and marp-cli names it after the source. Keep decks flat beside
-  their siblings, `<slug>.md` and `<slug>.pdf`, sharing one `images/` folder.
+- Name the export as a title, the way the client will see it in an inbox or
+  their Drive: `NoTambourine · Client (Topic).pdf`, parties joined with `·` as
+  in a document H1. Drop the client for an internal deck:
+  `NoTambourine (Topic).pdf`. Never ship `deck.pdf`; the PDF travels without its
+  folder.
+- Keep the source a lowercase slug so it greps and links cleanly, flat beside
+  its export: `<slug>.md` and the titled PDF, sharing one `images/` folder.
 - `--html` lets the `.eyebrow` paragraphs through. `--allow-local-files` loads
   images by relative path.
 - marp-cli drives Chrome. A sandboxed agent shell may refuse to launch it; rerun
