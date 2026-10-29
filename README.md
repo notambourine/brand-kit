@@ -147,7 +147,6 @@ A `var(--x)` that reads a token this repo stopped declaring falls through to its
 fallback and the page still renders, so a bump can go wrong quietly. Check three
 things in the consumer's CI: the font bytes hash against `fonts/`, every color
 is one this kit defines, and every `var()` reads a property it still declares.
-`notambourine/share`'s `npm run brand` is the reference implementation.
 
 ## Release
 
