@@ -47,11 +47,11 @@
     "*.css"
   ],
   "devDependencies": {
-    "@storybook/addon-a11y": "10.6.4",
-    "@storybook/addon-docs": "10.6.4",
-    "@storybook/html-vite": "10.6.4",
+    "@storybook/addon-a11y": "10.6.5",
+    "@storybook/addon-docs": "10.6.5",
+    "@storybook/html-vite": "10.6.5",
     "prettier": "3.9.10",
-    "storybook": "10.6.4",
+    "storybook": "10.6.5",
     "style-dictionary": "5.7.1",
     "vite": "8.3.5"
   }
