@@ -11,7 +11,7 @@ where each one lives.
 - `NoTambourine · a boutique AI-native engineering agency`, or under the
   wordmark the eyebrow `Senior engineers, inside your team`
 - `We want you to keep hiring us because the last project paid off.`
-- `AI-native engineering for the systems that run your business.`
+- `AI-native engineering for the software your business runs on.`
 - `Senior engineers who join your team and lead delivery.`
 - `Platform migrations, redesigns, site speed, and ongoing engineering.`
 - `Launch a product, automate routine work, or connect systems and data.`
