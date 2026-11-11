@@ -9,9 +9,9 @@ Pick and combine these lines; write new copy in their register. The site owns
 where each one lives.
 
 - `NoTambourine · a boutique AI-native engineering agency`, or under the
-  wordmark the eyebrow `Senior engineers, inside your team`
+  wordmark the eyebrow `AI-native engineering, inside your team`
 - `We want you to keep hiring us because the last project paid off.`
-- `AI-native engineering for the systems that run your business.`
+- `A skunkworks team that moves your numbers.`
 - `Senior engineers who join your team and lead delivery.`
 - `Platform migrations, redesigns, site speed, and ongoing engineering.`
 - `Launch a product, automate routine work, or connect systems and data.`
