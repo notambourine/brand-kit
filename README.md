@@ -101,7 +101,7 @@ faces.
 ### With Tailwind or StyleX
 
 A Tailwind v4 surface imports `tailwind.css`. It carries `vars.css` and maps it
-onto Tailwind's theme names (`bg-ink`, `text-fg-subtle`, `rounded-md`), so the
+onto Tailwind's theme names (`bg-page`, `text-fg-subtle`, `rounded-md`), so the
 surface writes no `@theme` of its own and `.theme-light` flips its utilities.
 
 ```css
