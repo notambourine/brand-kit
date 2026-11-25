@@ -45,8 +45,8 @@ pandoc <slug>.md -f gfm+yaml_metadata_block -s --embed-resources \
 - Title the H1 with both parties, so the client can place it among their
   vendors, and the document's short name in pink:
   `NoTambourine · Client (*SOW 2*)`. That is the H1's only pink; section heads
-  and bullets print pink on their own, so never emphasize inside an H2. Leave
-  the parties out of the body once the title names them.
+  and bullets are pink on their own, so never emphasize inside an H2. Leave the
+  parties out of the body once the title names them.
 - Make the paragraph under the H1 the purpose; it prints as the lede. Put
   references in a plain paragraph after it.
 - Use H2 for each section a reader will look for and H3 for the clauses under

@@ -1,4 +1,4 @@
-# NoTambourine's culture: how we work
+# NoTambourine's culture: how we _work_
 
 These are our defaults for deciding what to do on an engagement.
 
