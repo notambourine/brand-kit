@@ -49,7 +49,9 @@
    knows where to start in a column of one face. */
 .nt-prose > h1 + p { color: var(--fg1); font-size: 1.125em; line-height: 1.5; }
 /* One word per headline, as on every other surface. */
-.nt-prose :is(h1, h2) em { color: var(--accent-text); font-style: italic; }
+.nt-prose h1 em { color: var(--accent-text); font-style: italic; }
+/* A grey page reads as unbranded, so section heads and bullets carry the accent. */
+.nt-prose h2 { color: var(--accent-text); }
 
 /* Markers sit flush with the text column and nested markers land under the
    parent's text. ch is exact in a mono face, so the indent is the marker. A
@@ -59,6 +61,7 @@
 .nt-prose :is(ul, ol) :is(ul, ol) { margin-top: 0.25em; }
 .nt-prose li + li { margin-top: 0.375em; }
 .nt-prose li::marker { color: var(--fg3); font-variant-numeric: tabular-nums; }
+.nt-prose ul > li::marker { color: var(--accent-text); }
 .nt-prose li > p { margin: 0; }
 .nt-prose li > p + p { margin-top: 0.5em; }
 

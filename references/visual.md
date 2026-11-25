@@ -44,8 +44,8 @@ Read exact values and component behavior from the CSS.
 - Build toggles, checkboxes, and radios on native inputs inside a `<label>`. Put
   a hover state only on a link or a button.
 - Wrap long-form documents in `.nt-prose` from `prose.css`. In a document, pink
-  marks links and one `*word*` per H1 or H2; links carry an underline. A
-  document PDF also turns its H2s and bullets pink. Structure comes from plain
+  marks links, one `*word*` in the H1, every H2, and bullet markers; links carry
+  an underline. Never emphasize inside an H2. Structure comes from plain
   Markdown: the paragraph under the H1 is the lede, a list of 2 to 6 bullets
   that each open `**figure**\` is a row of stat cards, an italic last line in a
   quote is its attribution, and an italic line under a lone image is its

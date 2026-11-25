@@ -1,4 +1,4 @@
-# NoTambourine's soul: what we believe
+# NoTambourine's soul: what we _believe_
 
 NoTambourine · a boutique AI-native engineering agency. We put senior engineers
 inside your team and plan each project around a business result you can see in

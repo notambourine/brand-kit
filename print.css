@@ -59,9 +59,3 @@
   background-origin: content-box;
   box-sizing: content-box;
 }
-
-/* A signed document is read on screen, where a grey page reads as unbranded.
-   Section heads and bullets carry the accent; the deep tone holds contrast on
-   paper, and an H1 still keeps its one emphasized word. */
-.print-doc .nt-prose h2 { color: var(--accent-text); }
-.print-doc .nt-prose ul > li::marker { color: var(--accent-text); }
